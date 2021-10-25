@@ -1,6 +1,6 @@
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '~@angular/material' as mat;
+@use "~@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
@@ -8,26 +8,45 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
-@import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
-// hue. Available color palettes: https://material.io/design/color/
-$dumbum-primary: mat.define-palette(mat.$indigo-palette);
-$dumbum-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+// hue. Available color palettes: https://material.io/desig n/color/
+
+:root {
+  --primary: rgb(22, 19, 74);
+  --accent: rgb(255, 168, 0);
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+$dumbum-color: (
+  background: var(--accent),
+  color: var(--primary),
+  contrast: (
+    background: rgb(255, 255, 255),
+    color: rgb(241, 106, 0),
+  ),
+);
+
+$dumbum-primary: mat.define-palette($dumbum-color, color);
+$dumbum-accent: mat.define-palette($dumbum-color, background);
 
 // The warn palette is optional (defaults to red).
 $dumbum-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$dumbum-theme: mat.define-light-theme((
-  color: (
-    primary: $dumbum-primary,
-    accent: $dumbum-accent,
-    warn: $dumbum-warn,
+$dumbum-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $dumbum-primary,
+      accent: $dumbum-accent,
+      warn: $dumbum-warn,
+    ),
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
@@ -36,5 +55,55 @@ $dumbum-theme: mat.define-light-theme((
 
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.bg-primary {
+  background-color: var(--primary);
+}
+
+.bg-accent {
+  background-color: var(--accent);
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-accent {
+  color: var(--accent);
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: var(--primary);
+  border-color: var(--primary);
+}
+
+.btn-accent {
+  color: #fff;
+  background-color: var(--accent);
+  border-color: var(--accent);
+}
+
+.text-strong {
+  text-transform: uppercase;
+  font-weight: 750;
+  color: var(--primary);
+  cursor: pointer;
+}
+
+a.text-strong {
+  text-decoration: unset;
+}
+
+.mat-badge-content {
+  color: white;
+  background: var(--bs-red);
+}

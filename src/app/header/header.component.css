@@ -1,0 +1,12 @@
+a.main-pages-item {
+  color: var(--primary);
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.main-pages-item:hover {
+  border-bottom: solid var(--accent) 4px;
+  padding-bottom: 4px;
+}
