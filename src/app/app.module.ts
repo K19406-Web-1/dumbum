@@ -10,12 +10,14 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { TieuDeComponent } from './tieu-de/tieu-de.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
+import { TranComponent } from './tran/tran.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TieuDeComponent,
-    HeaderComponent
+    HeaderComponent,
+    TranComponent
   ],
   imports: [
     BrowserModule,
