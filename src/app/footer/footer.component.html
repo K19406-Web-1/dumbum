@@ -11,18 +11,18 @@
         </div>
         <div class="text-pre-footer">
             <i class="bi bi-people"></i><span> Luôn lắng nghe bạn</span>
-            <p>Đội ngũ nhân viên luôn lắng nghe và cải thiện mỗi ngày</p>
+            <p>Đội ngũ nhân viên sẽ luôn lắng nghe và cải thiện mỗi ngày</p>
         </div>
 
     </div>
 
 </div>
 <div class="box-container">
-    <div class="box-container-1">
+    <div class="box__item box__item--top">
         <div style="margin-bottom: 15px"><img src="../../assets/Best YOUR CHOOSE.png" alt="BestYourChoose.png"></div>
         <div style="width:142.63px">
-            <div class="box-container-1--text">VỀ CHÚNG TÔI</div>
-            <div class="box-container-1--text--hover">
+            <div class="box__item--headingtext">VỀ CHÚNG TÔI</div>
+            <div class="box__text--hover">
                 <p>Giới thiệu</p>
                 <p>Lịch sử hình thành</p>
                 <p>Thông tin chi tiết</p>
@@ -30,30 +30,29 @@
             </div>
         </div>
         <div style="width:218.68px">
-            <div class="box-container-1--text">HỖ TRỢ KHÁCH HÀNG</div>
-            <div class="box-container-1--text--hover">
-                <p>Chính sách đổi trả</p>
+            <div class="box__item--headingtext">HỖ TRỢ KHÁCH HÀNG</div>
+            <div class="box__text--hover">
                 <p>Giao hàng</p>
                 <p>Phương thức thanh toán</p>
                 <p>Cách thức mua hàng</p>
             </div>
 
         </div>
-        <div style="width:219.23px">
-            <div class="box-container-1--text">CHÍNH SÁCH</div>
-            <div class="box-container-1--text--hover">
-                <p>Điều khoản sử dụng</p>
-                <p>Chính sách bảo mật thông tin</p>
-                <p>Bảo mật</p>
+        <div style="width:150.23px">
+            <div class="box__item--headingtext">CHÍNH SÁCH</div>
+            <div class="box__text--hover">
+                <p>Chính sách đổi trả</p>
+                <p>Chính sách bảo mật</p>
+                <p>Điều khoản dịch vụ</p>
             </div>
 
         </div>
 
     </div>
 
-    <div class="box-container-2">
+    <div class="box__item box__item--bottom">
         <div>
-            <div class="box-container-1--text" style="margin-bottom: 7px;">LIÊN HỆ VỚI CHÚNG TÔI</div>
+            <div class="box__item--headingtext" style="margin-bottom: 7px;">LIÊN HỆ VỚI CHÚNG TÔI</div>
             <div class="icon" style="font-weight: bold;">
                 <i class="bi bi-geo-alt-fill"></i> Số 669, Khu phố 3, Quốc lộ 1A, Phường Linh Xuân, TP. Thủ Đức, TP. Hồ
                 Chí Minh
@@ -61,7 +60,7 @@
                 <br> <i class="bi bi-clock-fill"></i> Thời gian mở cửa: 08:00 AM - 21:00 PM
                 <br> <i class="bi bi-envelope-fill"></i> dumbum123@gmail.com
             </div>
-            <div class="box-container-1--text" style="margin-bottom: 7px; margin-top: 30px; display: flex;">MẠNG XÃ HỘI
+            <div class="box__item--headingtext" style="margin-bottom: 7px; margin-top: 30px; display: flex;">MẠNG XÃ HỘI
                 <div class="icon" style="margin-left: 10px;"> <i class="bi bi-facebook"></i> </div>
                 <div class="icon" style="margin-left: 10px;"> <i class="bi bi-instagram"></i></div>
 
@@ -71,15 +70,26 @@
         </div>
 
         <div class="box__item-container-2">
-            <div class="box-container-1--text" style="margin-bottom: 7px;">ĐÓNG GÓP Ý KIẾN</div>
+            <div class="box__item--headingtext" style="margin-bottom: 7px;">ĐÓNG GÓP Ý KIẾN</div>
             <form action="">
                 <div style="display: flex; justify-content: space-between;">
-                    <input class="form-input" type="text" placeholder="Họ và tên">
-                    <input class="form-input" type="text" placeholder="Số điện thoại">
+                    <div class="form-floating">
+                        <input class="form-control" type="text" placeholder="Họ và tên">
+                        <label for="floatingName">Họ và tên</label>
+
+                    </div>
+                    <div class="form-floating">
+                        <input class="form-control" type="text" placeholder="Số điện thoại">
+                        <label for="floatingTel">Số điện thoại</label>
+
+                    </div>
+                   
+                    
                 </div>
-                <div>
-                    <textarea class="form-input" style="width:100%" name="feedback" id="feedback" cols="30" rows="5"
+                <div class="form-floating">
+                    <textarea class="form-control" style="width:100%; height: 100px;" name="feedback" id="feedback" 
                         placeholder="Viết lời nhắn của bạn tại đây"></textarea>
+                        <label for="floatingTextarea">Viết lời nhắn của bạn tại đây</label>
                 </div>
                 <div>
                     <input class="form-button" type="submit" value="Gửi">
