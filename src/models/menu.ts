@@ -1,25 +1,33 @@
 export class Menu {
-  items: MenuItem[] = []
+  items: MenuItem[] = [];
+  heading?: string;
 
-  constructor(items: MenuItem[]) {
-    this.items = items;
+
+  constructor(items: MenuItem[], heading?: string) {
+    this.items = items
+    this.heading = heading
   }
 
 }
 
 export class MenuItem {
   href?: string;
-  name!: string;
+  value: string | any;
   icon?: string;
   children?: MenuItem[];
 
-  constructor(name: string, href?: string, icon?: string, children?: MenuItem[]) {
-    this.href = href;
-    this.name = name;
-    this.icon = icon;
-    this.children = children;
-
+  constructor(
+    value: string | any,
+    href?: string,
+    icon?: string,
+    children?: MenuItem[]
+  ) {
+    this.href = href
+    this.value = value
+    this.icon = icon
+    this.children = children
   }
+
 
   isCurrentTab(justStartWith?: boolean): boolean {
     if (justStartWith) {
