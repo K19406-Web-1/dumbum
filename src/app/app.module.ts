@@ -11,13 +11,15 @@ import { TieuDeComponent } from './tieu-de/tieu-de.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { KhogaDetailComponent } from './khoga-detail/khoga-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TieuDeComponent,
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    KhogaDetailComponent
   ],
   imports: [
     BrowserModule,

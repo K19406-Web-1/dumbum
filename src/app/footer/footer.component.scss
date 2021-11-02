@@ -16,30 +16,23 @@
     font-size: 24px;
     color: var(--primary);
     line-height: 1.5;
-   
 }
 .text-pre-footer>i{
-    color: rgb(241, 106, 0);
+    color: var(--third);
     font-weight: bolder;
-
 }
 .text-pre-footer>span{
     color: var(--accent) ;
     font-weight: bold;
-    
-
 }
 .pre-footer{
     padding: 35px 60px;
 }
-
 .box-container{
     background-color: var(--accent) ;
     width: 100%;
     padding: 35px 60px;
     color:var(--primary);
-    
-
 }
 .box__item{
     display: flex;
@@ -47,7 +40,6 @@
     font-size: 16px;
     flex-wrap: wrap;
     margin-bottom: 30px;
-
 }
 .box__item--top{
     line-height: 1;
@@ -58,8 +50,7 @@
 .box__item--headingtext{
     font-weight: bold;
     font-size: 20px;
-    margin-bottom: 15px;
-    
+    margin-bottom: 20px;
 }
 .icon>i{
     color: white;
@@ -69,7 +60,7 @@
     flex-basis: 40%;
 }
 .form-input{
-    width: 240px;
+    width: 230px;
     border-radius: 5px;
     margin-bottom: 10px;
     font-size: 14px;
@@ -86,7 +77,6 @@
     width: 150px;
     height: 40px;
 }
-
 .box__text--hover>p:hover{
     text-decoration: underline;
     cursor: pointer;
@@ -95,18 +85,16 @@
     .box__item--top{
         flex-direction: column;
         justify-content: space-between;
-        height: 800px;
+        height: 700px;
     }
     .box__item--bottom{
         flex-direction: column;
         justify-content: space-between;
     }
-    .box-pre-footer{
+    .box-pre-footer, .box-input{
         flex-direction: column;
     }
-    .box-input{
-        flex-direction: column;
-    }
+   
     
     
 
