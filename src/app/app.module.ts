@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
-import {MatButtonModule} from '@angular/material/button';
-import {MatBadgeModule} from '@angular/material/badge';
+import { MatButtonModule } from '@angular/material/button';
+import { MatBadgeModule } from '@angular/material/badge';
+import { MatTabsModule } from '@angular/material/tabs';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,7 +12,9 @@ import { TieuDeComponent } from './tieu-de/tieu-de.component';
 import { RouterModule } from '@angular/router';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { KhogaDetailComponent } from './khoga-detail/khoga-detail.component';
+import { HomePageComponent } from './home-page/home-page.component';
+import { BannerComponent } from './banner/banner.component';
+import { ProductTemplateComponent } from './product-template/product-template.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +22,9 @@ import { KhogaDetailComponent } from './khoga-detail/khoga-detail.component';
     TieuDeComponent,
     HeaderComponent,
     FooterComponent,
-    KhogaDetailComponent
+    HomePageComponent,
+    BannerComponent,
+    ProductTemplateComponent
   ],
   imports: [
     BrowserModule,
@@ -27,8 +32,9 @@ import { KhogaDetailComponent } from './khoga-detail/khoga-detail.component';
     BrowserAnimationsModule,
     MatButtonModule,
     MatBadgeModule,
+    MatTabsModule,
     RouterModule.forRoot([
-      { path: 'tieu-de', component: TieuDeComponent }
+      { path: '', component: HomePageComponent }
     ]),
   ],
   providers: [],
