@@ -1,8 +1,8 @@
 <div class="row m-3">
-  <div class="product-group">
+  <div class="product-group" role="button" (click)="seeMore.emit()">
     <div class="row text-center w-100">
       <div class="card card-body card-product shadow rounded-hard">
-        <img [src]="'../../assets/' + product.imageURL" class="rounded-top rounded-hard">
+        <img [src]="'../../assets/' + product.imageURL" class="rounded-top rounded-hard" loading="lazy">
         <div class="fs-5 text-uppercase lh-sm d-grid mt-1">
           <span>{{product.name}}</span>
           <span class="fw-bold">{{product.unitPrice}}</span>

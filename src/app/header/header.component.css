@@ -29,5 +29,13 @@
   }
   #search {
     margin: auto;
+    width: 50vw;
+    max-width: 100%;
+  }
+}
+
+@media (min-width: 1000px){
+  #navContent{
+    display: initial;
   }
 }

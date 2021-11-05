@@ -11,16 +11,16 @@ export class HomePageComponent implements OnInit {
 
   products: Menu[] = [
     new Menu([
-      new MenuItem(new Product('Gà sấy khô', 40000, '1.png')),
-      new MenuItem(new Product('Gà sấy khô', 40000, '2.png')),
-      new MenuItem(new Product('Gà sấy khô', 40000, '3.png')),
-      new MenuItem(new Product('Gà sấy khô', 40000, '4.png'))
+      new MenuItem(new Product('Gà sấy khô', 40000, '1-min.png'), 'product-detail'),
+      new MenuItem(new Product('Gà sấy khô', 40000, '2-min.png')),
+      new MenuItem(new Product('Gà sấy khô', 40000, '3-min.png')),
+      new MenuItem(new Product('Gà sấy khô', 40000, '4-min.png'))
     ], 'SẢN PHẨM NỔI BẬT'),
     new Menu([
-      new MenuItem(new Product('Gà sấy khô', 40000, '5.png')),
-      new MenuItem(new Product('Gà sấy khô', 40000, '6.png')),
-      new MenuItem(new Product('Gà sấy khô', 40000, '7.png')),
-      new MenuItem(new Product('Gà sấy khô', 40000, '8.png'))
+      new MenuItem(new Product('Gà sấy khô', 40000, '5-min.png')),
+      new MenuItem(new Product('Gà sấy khô', 40000, '6-min.png')),
+      new MenuItem(new Product('Gà sấy khô', 40000, '7-min.png')),
+      new MenuItem(new Product('Gà sấy khô', 40000, '8-min.png'))
     ], 'GIẢM GIÁ')
   ]
 
