@@ -15,6 +15,7 @@ import { FooterComponent } from './footer/footer.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductTemplateComponent } from './product-template/product-template.component';
+import { ProductDetailComponent } from './product-detail/product-detail.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductTemplateComponent } from './product-template/product-template.co
     FooterComponent,
     HomePageComponent,
     BannerComponent,
-    ProductTemplateComponent
+    ProductTemplateComponent,
+    ProductDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -34,7 +36,8 @@ import { ProductTemplateComponent } from './product-template/product-template.co
     MatBadgeModule,
     MatTabsModule,
     RouterModule.forRoot([
-      { path: '', component: HomePageComponent }
+      { path: '', component: HomePageComponent },
+      { path: 'product-detail', component: ProductDetailComponent }
     ]),
   ],
   providers: [],
