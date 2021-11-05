@@ -8,16 +8,17 @@
     margin-top: 10px;
 }
 .img-small{
+    margin: 10px 10px 0px 0px;
     width: 100px;
     height: 100px;
-    margin-bottom: 25px;
     border-radius: 10px ;
+    
 }
 .img-large{
    // width: 525px;
    // height: 525px;
    min-width: 250px;
-   width: 525px;
+   width: 510px;
    // width: 50%;
     border-radius: 10px;
 }
@@ -26,7 +27,7 @@
     font-weight: bold; 
     color: var(--accent);
 }
-.text-size{
+.text{
     font-size: 20px;
     color: var(--primary);
     line-height: 1.3;
@@ -94,4 +95,7 @@ ul{
     margin: 0 auto;
     font-size: 25px;
     margin-top: 10px;
+}
+.feedback>div>i{
+    color: var(--accent);
 }
