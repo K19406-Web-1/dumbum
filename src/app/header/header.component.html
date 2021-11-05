@@ -1,23 +1,31 @@
-<nav>
-  <div class="d-flex flex-column" style="height: 130px;">
+<nav class="navbar-expand-lg navbar-light">
+  <div class="d-flex flex-column">
     <div class="bg-white d-flex flex-grow-1">
-      <div class="container d-flex align-self-center">
-        <img src="../../assets/logo.png" alt="Logo DumBum" id="logo">
-        <div class="d-flex justify-content-between align-items-center align-self-center mx-5 w-50 px-0">
-          <a class="main-pages-item" *ngFor="let item of mainPages.items">{{item.value}}</a>
+      <div class="container nav-header">
+        <img id="logo" src="../../assets/logo.png" alt="Logo DumBum" style="height: 50px;">
+        <div id="navContent" class="collapse w-100 my-2">
+          <div class="d-flex justify-content-lg-between flex-grow-1 navbar-nav">
+            <div class="d-flex justify-content-between w-50 px-0 navbar-nav">
+              <a class="nav-link" *ngFor="let item of mainPages.items">{{item.value}}</a>
+            </div>
+            <hr>
+            <div class="flex-betweent-center fs-3" style="width: 200px;">
+              <i class="bi bi-cart2" matBadge="2"></i>
+              <hr class="vr m-0">
+              <a class="nav-link">Đăng nhập</a>
+            </div>
+          </div>
         </div>
-        <div class="d-flex justify-content-between align-items-center align-self-center fs-3 ms-auto"
-          style="width: 200px;">
-          <i class="bi bi-cart2" matBadge="2"></i>
-          <hr class="vr m-0">
-          <a class="main-pages-item">Đăng nhập</a>
-        </div>
+        <a id="toggle" class="navbar-toggler border-0" type="button" data-bs-toggle="collapse"
+          data-bs-target="#navContent" aria-controls="navContent" aria-expanded="false">
+          <span class="navbar-toggler-icon"></span>
+        </a>
       </div>
     </div>
     <div class="bg-accent d-flex py-2">
-      <div class="container d-flex justify-content-between align-items-center">
-        <a class="text-strong" *ngFor="let item of categories.items">{{item.value}}</a>
-        <div class="input-group w-25 d-flex flex-row">
+      <div class="container flex-betweent-center">
+        <button class="btn btn-accent" name="product" *ngFor="let item of categories.items">{{item.value}}</button>
+        <div id="search" class="input-group w-25 d-flex" style="min-width: max-content;">
           <div class="form-floating small flex-grow-1">
             <input type="search" class="form-control rounded-0 rounded-start pb-0 pt-3" name="search" id="search"
               style="font-size: 0.8rem; max-height: 40px;" placeholder=" ">

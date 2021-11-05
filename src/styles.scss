@@ -16,6 +16,8 @@
   --primary: rgb(22, 19, 74);
   --accent: rgb(255, 168, 0);
   --third: rgb(241, 106, 0);
+  --shadow: 4px 2px 4px rgba(0, 0, 0, 0.25);
+  --rounded-hard-single: 1rem;
 }
 
 * {
@@ -81,24 +83,51 @@ body > main {
   flex-grow: 1;
 }
 
-::-webkit-scrollbar {
-  display: none;
+.rounded-hard {
+  border-radius: var(--rounded-hard-single);
+}
+
+.rounded-hard-children > * {
+  border-radius: var(--rounded-hard-single);
+}
+
+.rounded-hard.rounded-top {
+  border-radius: var(--rounded-hard-single) var(--rounded-hard-single) 0 0 !important;
+}
+
+::-webkit-scrollbar,
+::-webkit-scrollbar-button {
+  display: none !important;
 }
 
 .bg-primary {
-  background-color: var(--primary);
+  background-color: var(--primary) !important;
 }
 
 .bg-accent {
-  background-color: var(--accent);
+  background-color: var(--accent) !important;
 }
 
 .text-primary {
-  color: var(--primary);
+  color: var(--primary) !important;
 }
 
 .text-accent {
-  color: var(--accent);
+  color: var(--accent) !important;
+}
+
+.btn {
+  font-weight: bold;
+}
+
+.btn-check:focus + .btn,
+.btn:focus,
+.navbar-toggler:focus {
+  box-shadow: none !important;
+}
+
+.btn:hover {
+  box-shadow: var(--shadow);
 }
 
 .btn-primary {
@@ -108,9 +137,15 @@ body > main {
 }
 
 .btn-accent {
-  color: #fff;
+  color: var(--primary);
   background-color: var(--accent);
   border-color: var(--accent);
+}
+
+.btn-accent:hover {
+  background: #fff;
+  border: 1px solid var(--accent);
+  color: var(--accent);
 }
 
 .text-strong {
@@ -122,6 +157,20 @@ body > main {
 
 a.text-strong {
   text-decoration: unset;
+}
+
+a.nav-link {
+  color: var(--primary) !important;
+  font-weight: 700;
+  font-size: 1.2rem;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+a.nav-link:hover {
+  border-bottom: solid var(--accent) 4px;
+  padding-bottom: 4px;
+  transition: all 0.1s;
 }
 
 .mat-badge-content {
@@ -143,4 +192,19 @@ a.text-strong {
 .mat-tab-label:focus,
 .mat-tab-link:focus {
   color: var(--accent);
+}
+
+.flex-betweent-center {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.full-width {
+  width: 100vw !important;
+  position: relative !important;
+  left: 50% !important;
+  right: 50% !important;
+  margin-left: -50vw !important;
+  margin-right: -50vw !important;
 }

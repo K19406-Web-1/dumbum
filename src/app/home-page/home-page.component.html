@@ -1,7 +1,7 @@
-<!-- <app-banner></app-banner> -->
-<mat-tab-group class="w-100">
+<app-banner></app-banner>
+<mat-tab-group>
   <mat-tab *ngFor="let item of products" [label]="item.heading!">
-    <div class="d-flex flex-wrap justify-content-around text-center pb-5">
+    <div class="d-flex flex-wrap justify-content-around text-center pb-5 mt-3">
       <app-product-template *ngFor="let productInItem of item.items" [product]="productInItem.value"></app-product-template>
     </div>
   </mat-tab>
@@ -9,7 +9,7 @@
 
 <div class="box-pre-footer">
   <div style="font-weight: bold; color: var(--accent); font-size: 30px; text-align: center; line-height: 1.5;" >TIỆN LỢI KHI MUA ĐỒ ĂN VẶT TẠI DUMBUM</div>
-  <div class="box-pre-footer" style=" margin-top: 30px; display: flex; justify-content: space-between; flex-wrap: wrap;">
+  <div class="box-pre-footer flex-betweent-center" style=" margin-top: 30px; flex-wrap: wrap;">
       <div class="text-pre-footer">
           <i class="bi bi-truck"></i><span> Giao hàng ưu việt</span>
           <p>Đội ngũ giao hàng đảm bảo tốt mọi nhu cầu mua sắm</p>

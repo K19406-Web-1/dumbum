@@ -1,16 +1,14 @@
-<div class="row mt-5">
+<div class="row m-3">
   <div class="product-group">
-    <div class="row text-center row-margin row-color">
-      <div class="col-md-3 col-sm-6 col-12">
-        <div class="card shadow card-product">
-          <img [src]="'../../assets/' + product.imageURL" class="card-img-top img-size">
-          <div class="card-body  card-body__size">
-            <p class="card-title">{{product.name}}</p>
-            <p class="card-text fw-bold">{{product.unitPrice}}</p>
-            <a href="#" class="btn btn-primary btn-size">THÊM VÀO GIỎ HÀNG</a>
-          </div>
+    <div class="row text-center w-100">
+      <div class="card card-body card-product shadow rounded-hard">
+        <img [src]="'../../assets/' + product.imageURL" class="rounded-top rounded-hard">
+        <div class="fs-5 text-uppercase lh-sm d-grid mt-1">
+          <span>{{product.name}}</span>
+          <span class="fw-bold">{{product.unitPrice}}</span>
+          <button class="btn btn-accent mt-1">THÊM VÀO GIỎ</button>
         </div>
       </div>
     </div>
   </div>
-</div>  
+</div>
