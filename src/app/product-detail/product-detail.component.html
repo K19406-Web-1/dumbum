@@ -6,7 +6,7 @@
     </li>
   </ol>
   <div class="box-product">
-    <div class="d-flex">
+    <div class="d-flex" style="flex-basis: 49%;" >
       <div>
         <img class="img-large" src="../../assets/khoga/banner.jpg" alt="Không thể tải được hình ảnh">
         <div style="display: flex; flex-direction: row;">
@@ -15,24 +15,31 @@
         </div>
       </div>
     </div>
-    <div style="width:550px; height: 535px">
+    <div style="flex-basis: 49%;">
       <p style="font-size: 24px ; font-weight: bold; color: var(--accent);">KHÔ GÀ LÁ CHANH XÉ CAY 280G</p>
       <div class="unit-price-box">
         <p style=" font-size: 30px; font-weight: bold; color: var(--primary);">61.000 đồng</p>
       </div>
-      <div class="text" style="margin-bottom: 20px; color: var(--accent); font-weight: bold;">
+      <div class="text" style="margin: 20px 0px; color: var(--accent); font-weight: bold; display: flex; ">
         <label for="quality">Số lượng:</label>
+        <div class="buttons_added input-group" style=" width: auto; font-size: 14px;">
+          <input class="btn-accent form-control" type="button" value="-" style="height:2.2rem; font-size:1rem; width:1.9rem;" >
+          <input  class="form-control" max="Số tối đa" min="Số tối thiểu" name="" type="text"  id="qty" style="height:2.2rem; font-size:1rem; width:2.5rem;">
+          <input class="btn-accent form-control" type="button" value="+" style="height:2.2rem; font-size:1rem; width:1.9rem;" >
+          
+        </div>
+       
       </div>
       <div class="form-button">
         <input class="btn btn-accent" type="button" value="THÊM VÀO GIỎ HÀNG">
         <input class="btn btn-accent"  type="button" value="MUA NGAY">
       </div>
       <div class="text">
-        <i class="bi bi-truck"></i> <span> Miễn phí vận chuyển</span>
+        <i class="bi bi-truck"></i> <span style="font-weight: bold;"> Miễn phí vận chuyển</span>
         <ul>
           <li>Giao hàng miễn phí với mức giá cố định từ 300K trở lên</li>
         </ul>
-        <i class="bi bi-cash-coin"></i> <span> Chính sách đổi trả</span>
+        <i class="bi bi-cash-coin"></i> <span style="font-weight: bold;"> Chính sách đổi trả</span>
         <ul>
           <li>Chỉ chấp nhận đổi trả do sai sót bên Dumbum hay bên nhà vận chuyển</li>
           <li>Các sản phẩm được đổi trả trong vòng 7 ngày kể từ ngày nhận hàng</li>
@@ -42,7 +49,7 @@
       </div>
     </div>
   </div>
-  <div style="width: 640px;" class="box-detail">
+  <div class="box-detail box-detail--1 ">
     <div style="padding: 20px;">
       <p class="text-heading">MÔ TẢ CHI TIẾT SẢN PHẨM</p>
       <div class="text">
@@ -67,9 +74,10 @@
     <div style="padding: 20px;">
       <p class="text-heading">ĐÁNH GIÁ VÀ NHẬN XÉT SẢN PHẨM</p>
       <div class="box-review">
-        <div class="review">
-          <p class="text" style="font-size: 24px;">Đánh giá trung bình</p>
-          <p style="font-weight: bold; font-size: 72px; color: var(--third); line-height: 1;">5/5</p>
+        <div class="d-flex" style="justify-content: space-between; flex-basis: 60%;" >
+          <div class="review">
+            <p class="text" style="font-size: 1.2rem;">Đánh giá trung bình</p>
+          <p style="font-weight: bold; font-size: 4rem; color: var(--third); line-height: 1;">5/5</p>
           <div>
             <i class="bi bi-star-fill"></i>
             <i class="bi bi-star-fill"></i>
@@ -78,36 +86,40 @@
             <i class="bi bi-star-fill"></i>
           </div>
           <p class="text">1 đánh giá & 0 nhận xét</p>
+
+          </div>
+    
+
+          <div class="feedback" style="display: flex; flex-direction: column;">
+            <div>
+              <p>5</p><i class="bi bi-star-fill"></i><progress max="100" value="100"></progress>
+              <p>1</p>
+            </div>
+            <div>
+              <p>4</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
+              <p>0</p>
+            </div>
+            <div>
+              <p>3</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
+              <p>0</p>
+            </div>
+            <div>
+              <p>2</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
+              <p>0</p>
+            </div>
+            <div>
+              <p>1</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
+              <p>0</p>
+            </div>
+          </div>
         </div>
-        <div class="feedback" style="display: flex; flex-direction: column;">
-          <div>
-            <p>5</p><i class="bi bi-star-fill"></i><progress max="100" value="100"></progress>
-            <p>1</p>
-          </div>
-          <div>
-            <p>4</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
-            <p>0</p>
-          </div>
-          <div>
-            <p>3</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
-            <p>0</p>
-          </div>
-          <div>
-            <p>2</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
-            <p>0</p>
-          </div>
-          <div>
-            <p>1</p><i class="bi bi-star-fill"></i><progress max="100" value="0"></progress>
-            <p>0</p>
-          </div>
-        </div>
-        <div class="form-button" style="display: flex; flex-direction: column;">
-          <p style="width:300px; text-align: center;" class="text" for="">Bạn đã từng dùng sản phẩm này?</p>
+        
+        <div class="form-button" style="display: flex; flex-direction: column; flex-basis: 30%; " >
+          <p style="width:100%; text-align: center;" class="text" for="">Bạn đã từng dùng sản phẩm này?</p>
           <input class="btn btn-accent" type="button" value="Gửi đánh giá của bạn">
         </div>
       </div>
     </div>
   </div>
-
-
 </div>
+
