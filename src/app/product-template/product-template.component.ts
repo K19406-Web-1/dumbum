@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { Product } from 'src/models/product';
+import { ProductBase } from 'src/models/product';
 
 @Component({
   selector: 'app-product-template',
@@ -8,7 +8,7 @@ import { Product } from 'src/models/product';
 })
 export class ProductTemplateComponent implements OnInit {
 
-  @Input() product!: Product;
+  @Input() product!: ProductBase;
   @Output() seeMore = new EventEmitter();
 
   constructor() { }
