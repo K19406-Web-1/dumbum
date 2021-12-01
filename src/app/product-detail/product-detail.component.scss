@@ -99,10 +99,11 @@ ul {
 @media screen and (max-width: 768px) {
   .box-product{
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
-    height: 1200px;
-
+  }
+  .box-product>div:nth-child(2){
+    margin-top: 15px;
   }
   .box-detail{
     width: 100%;
