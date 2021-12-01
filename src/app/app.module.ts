@@ -15,6 +15,7 @@ import { HomePageComponent } from './home-page/home-page.component';
 import { BannerComponent } from './banner/banner.component';
 import { ProductTemplateComponent } from './product-template/product-template.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
+import { ProductListComponent } from './product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     HomePageComponent,
     BannerComponent,
     ProductTemplateComponent,
-    ProductDetailComponent
+    ProductDetailComponent,
+    ProductListComponent
   ],
   imports: [
     BrowserModule,
@@ -35,7 +37,8 @@ import { ProductDetailComponent } from './product-detail/product-detail.componen
     MatTabsModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
-      { path: 'product-detail', component: ProductDetailComponent }
+      { path: 'product-detail', component: ProductDetailComponent },
+      { path: 'product-list', component: ProductListComponent }
     ]),
   ],
   providers: [],

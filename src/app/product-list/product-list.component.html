@@ -1,0 +1,13 @@
+<!--<p>product-list works!</p>-->
+<!--<img src="../../assets/BANNER fi.jpg" class="full-width m-0">-->
+<div>
+    
+</div>
+<mat-tab-group>
+    <mat-tab *ngFor="let item of products" [label]="item.heading!">
+      <div class="d-flex flex-wrap justify-content-around text-center pb-5 mt-3">
+        <app-product-template *ngFor="let productInItem of item.items" [product]="productInItem.value"
+          (seeMore)="productInItem.rediect()"></app-product-template>
+      </div>
+    </mat-tab>
+  </mat-tab-group>
