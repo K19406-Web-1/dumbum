@@ -1,0 +1,21 @@
+//padding: 35px 60px;
+.text-pre-footer{
+    flex-basis: 30%;
+    font-size: 24px;
+    color: var(--primary);
+    line-height: 1.5;
+}
+.text-pre-footer>i{
+    color: var(--third);
+    font-weight: bolder;
+}
+.text-pre-footer>span{
+    color: var(--accent) ;
+    font-weight: bold;
+}
+@media screen and (max-width: 768px) {
+    .box-pre-footer{
+        flex-direction: column;
+    }
+}
+

@@ -1,0 +1,15 @@
+img {
+  max-width: 100%;
+  max-height: 600px;
+}
+
+@media (max-width: 1400px) {
+  #sub-banner {
+    display: none !important;
+  }
+
+  #imgMain {
+    margin: 0 !important;
+    width: 100%;
+  }
+}
