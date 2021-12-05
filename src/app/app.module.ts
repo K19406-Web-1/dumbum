@@ -16,6 +16,9 @@ import { BannerComponent } from './banner/banner.component';
 import { ProductTemplateComponent } from './product-template/product-template.component';
 import { ProductDetailComponent } from './product-detail/product-detail.component';
 import { ProductListComponent } from './product-list/product-list.component';
+import { CheckoutComponent } from './checkout/checkout.component';
+import { PolicyComponent } from './policy/policy.component';
+import { SignInComponent } from './sign-in/sign-in.component';
 
 @NgModule({
   declarations: [
@@ -26,7 +29,8 @@ import { ProductListComponent } from './product-list/product-list.component';
     BannerComponent,
     ProductTemplateComponent,
     ProductDetailComponent,
-    ProductListComponent
+    ProductListComponent,
+    SignInComponent
   ],
   imports: [
     BrowserModule,
@@ -38,7 +42,9 @@ import { ProductListComponent } from './product-list/product-list.component';
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
       { path: 'product-detail', component: ProductDetailComponent },
-      { path: 'product-list', component: ProductListComponent }
+      { path: 'product-list', component: ProductListComponent },
+      { path: 'checkout', component: CheckoutComponent},
+      { path: 'policy', component: PolicyComponent}
     ]),
   ],
   providers: [],

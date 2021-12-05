@@ -150,7 +150,7 @@ body > main {
 
 .text-strong {
   text-transform: uppercase;
-  font-weight: 750;
+  font-weight: 800;
   color: var(--primary);
   cursor: pointer;
 }
@@ -205,6 +205,11 @@ a.nav-link:hover {
   align-content: center;
 }
 
+.flex-bottom{
+  display: flex;
+  align-items: flex-end;
+}
+
 .full-width {
   max-width: 100vw !important;
   width: 100vw !important;
@@ -213,4 +218,9 @@ a.nav-link:hover {
   right: 50% !important;
   margin-left: -50vw !important;
   margin-right: -50vw !important;
+}
+
+#logo, img.small {
+  height: 50px;
+  width: 50px;
 }
