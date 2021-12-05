@@ -1,0 +1,32 @@
+
+.main{
+    border: 7px solid var(--accent);
+    box-sizing: border-box;
+    border-radius: 49px; 
+}
+.main_header{
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+.main-left{
+    margin-right: 1%;
+    margin-left: 10%;
+}
+.main-right{
+    margin-left: 2%;
+    margin-right: 10%;
+}
+img{
+    width: 250px;
+    max-width: 250px;
+    filter: drop-shadow(0px 4px 6px rgba(0, 0, 0, 0.44));
+    border-radius: 39px; 
+}
+.form-floating{
+    margin-top: 15%;
+}
+@media (max-width: 1000px) {
+    #img-main {
+      display: none !important;
+    }
+  }
