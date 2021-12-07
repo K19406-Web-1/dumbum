@@ -202,10 +202,10 @@ a.nav-link:hover {
 .flex-betweent-center {
   display: flex;
   justify-content: space-between;
-  align-content: center;
+  align-items: center;
 }
 
-.flex-bottom{
+.flex-bottom {
   display: flex;
   align-items: flex-end;
 }
@@ -220,7 +220,15 @@ a.nav-link:hover {
   margin-right: -50vw !important;
 }
 
-#logo, img.small {
+#logo,
+img.small {
   height: 50px;
   width: 50px;
+}
+
+.center-screen {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
 }
