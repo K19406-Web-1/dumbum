@@ -1,10 +1,28 @@
-import { Component } from '@angular/core';
+import { AfterContentInit, Component } from '@angular/core';
+
+let isLoading = true;
+
+export function enableLoading() {
+  isLoading = true;
+}
+
+export function disableLoading() {
+  isLoading = false;
+}
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements AfterContentInit {
+  ngAfterContentInit(): void {
+    isLoading = false;
+  }
+
   title = 'dumbum';
+
+  get loading() {
+    return isLoading;
+  }
 }

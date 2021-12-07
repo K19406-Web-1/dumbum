@@ -24,9 +24,24 @@
     flex-direction: column;
     align-items: flex-start;
   }
+
+  #navContentTitle {
+    align-items: flex-start;
+  }
+
+  #navContentAction {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #navContentAction, #navContentTitle, #navContentTitle+hr {
+    width: 100% !important;
+  }
+
   [name='product'] {
     display: none;
   }
+
   #search {
     margin: auto;
     width: 50vw;
@@ -34,8 +49,8 @@
   }
 }
 
-@media (min-width: 1000px){
-  #navContent{
+@media (min-width: 1000px) {
+  #navContent {
     display: initial;
   }
 }

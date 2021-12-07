@@ -2,19 +2,21 @@
   <div class="d-flex flex-column">
     <div class="bg-white d-flex flex-grow-1">
       <div class="container py-1 nav-header">
-       <a class="navbar-brand" href="">
-        <img id="logo" src="../../assets/logo.png" alt="Logo DumBum" >
-       </a>
-        <div id="navContent" class="collapse w-100 my-2">
-          <div class="flex-betweent-center flex-grow-1 navbar-nav">
-            <div class="flex-betweent-center w-50 px-0 navbar-nav">
+        <a class="navbar-brand" href="">
+          <img id="logo" src="../../assets/logo.png" alt="Logo DumBum">
+        </a>
+        <div id="navContent" class="collapse w-100 py-2">
+          <div id="navContentContainer" class="flex-betweent-center flex-grow-1 navbar-nav">
+            <div id="navContentTitle" class="flex-betweent-center w-50 px-0 navbar-nav">
               <a class="nav-link" *ngFor="let item of mainPages.items">{{item.value}}</a>
             </div>
             <hr>
-            <div class="flex-betweent-center fs-3" style="width: 200px;">
+            <div id="navContentAction" class="flex-betweent-center fs-3" style="width: 200px; height: 50px;">
               <i class="bi bi-cart2" matBadge="2"></i>
-              <hr class="vr m-0">
-              <a class="nav-link">Đăng nhập</a>
+              <hr class="vr h-100 m-0">
+              <a *ngIf="currentUser==null" class="nav-link" (click)="upSignUp()">Đăng nhập</a>
+              <img *ngIf="currentUser" class="rounded-circle small" [src]="currentUser.photoURL"
+                [title]="currentUser.displayName">
             </div>
           </div>
         </div>
@@ -26,7 +28,8 @@
     </div>
     <div class="bg-accent d-flex py-2">
       <div class="container flex-betweent-center">
-        <button class="btn btn-accent rounded-hard" name="product" *ngFor="let item of categories.items">{{item.value}}</button>
+        <button class="btn btn-accent rounded-hard" name="product"
+          *ngFor="let item of categories.items">{{item.value}}</button>
         <div id="search" class="input-group w-25 d-flex" style="min-width: max-content;">
           <div class="form-floating small flex-grow-1">
             <input type="search" class="form-control rounded-0 rounded-start pb-0 pt-3" name="search" id="search"

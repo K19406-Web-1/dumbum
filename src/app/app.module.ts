@@ -4,6 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTabsModule } from '@angular/material/tabs';
+import {MatDialogModule} from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -19,6 +20,7 @@ import { ProductListComponent } from './product-list/product-list.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { PolicyComponent } from './policy/policy.component';
 import { SignInComponent } from './sign-in/sign-in.component';
+import { SpinnerComponent } from './spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import { SignInComponent } from './sign-in/sign-in.component';
     ProductTemplateComponent,
     ProductDetailComponent,
     ProductListComponent,
-    SignInComponent
+    SignInComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +42,7 @@ import { SignInComponent } from './sign-in/sign-in.component';
     MatButtonModule,
     MatBadgeModule,
     MatTabsModule,
+    MatDialogModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
       { path: 'product-detail', component: ProductDetailComponent },
