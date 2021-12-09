@@ -21,6 +21,9 @@ import { CheckoutComponent } from './checkout/checkout.component';
 import { PolicyComponent } from './policy/policy.component';
 import { SignInComponent } from './sign-in/sign-in.component';
 import { SpinnerComponent } from './spinner/spinner.component';
+import { SubscribeInformComponent } from './subscribe-inform/subscribe-inform.component';
+import { NavigationListComponent } from './navigation-list/navigation-list.component';
+import { IntroPageComponent } from './intro-page/intro-page.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +36,9 @@ import { SpinnerComponent } from './spinner/spinner.component';
     ProductDetailComponent,
     ProductListComponent,
     SignInComponent,
-    SpinnerComponent
+    SpinnerComponent,
+    NavigationListComponent,
+    IntroPageComponent
   ],
   imports: [
     BrowserModule,

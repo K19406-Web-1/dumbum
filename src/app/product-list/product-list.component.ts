@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Menu, MenuItem } from 'src/models/menu';
 import { ProductBase } from 'src/models/product';
 
@@ -8,6 +8,14 @@ import { ProductBase } from 'src/models/product';
   styleUrls: ['./product-list.component.scss']
 })
 export class ProductListComponent implements OnInit {
+
+  readonly CATEGORY_PATH = location.pathname + '&category=';
+  categories: Menu = new Menu([
+    new MenuItem('Sản phẩm nổi bật', this.CATEGORY_PATH + 0),
+    new MenuItem('Sản phẩm khuyến mãi', this.CATEGORY_PATH + 1),
+    new MenuItem('Sản phẩm bán chạy', this.CATEGORY_PATH + 2),
+    new MenuItem('Tất cả sản phẩm', this.CATEGORY_PATH + 3)
+  ], 'DANH MỤC');
 
   products: Menu[] = [
     new Menu([
@@ -27,6 +35,11 @@ export class ProductListComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    const param = new URLSearchParams(location.search);
+    switch (parseInt(param.get('category')!)) {
+      case 0:
+    }
+
   }
 
 }

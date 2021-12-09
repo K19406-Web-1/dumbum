@@ -6,7 +6,7 @@ import { ProductBase } from 'src/models/product';
   templateUrl: './subscribe-inform.component.html',
   styleUrls: ['./subscribe-inform.component.scss']
 })
-export class SubscibeInformComponent implements OnInit {
+export class SubscribeInformComponent implements OnInit {
 
   @Input() product!: ProductBase;
   @Output() seeMore = new EventEmitter();
