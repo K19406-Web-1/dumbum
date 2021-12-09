@@ -1,0 +1,135 @@
+[
+  {
+    "name": "Da cá trứng muối",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 170,
+          "unit": "g"
+        },
+        "unitPrice": 79000,
+        "imageURL": [
+          "../../assets/product_detail/daChien/daCaTrungMuoi/banner.jpg",
+          "../../assets/product_detail/daChien/daCaTrungMuoi/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Da cá",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/daChien/daCaTrungMuoi/real.jpg",
+      "../../assets/product_detail/daChien/daCaTrungMuoi/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Da heo mắm hành",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 140,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/daChien/daHeoMamHanh/banner.jpg",
+          "../../assets/product_detail/daChien/daHeoMamHanh/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Da heo sạch",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/daChien/daHeoMamHanh/real.jpg",
+      "../../assets/product_detail/daChien/daHeoMamHanh/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Da heo tỏi ớt",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 140,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/daChien/daHeoToiOt/banner.jpg",
+          "../../assets/product_detail/daChien/daHeoToiOt/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Da heo sạch",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/daChien/daHeoToiOt/real.jpg",
+      "../../assets/product_detail/daChien/daHeoToiOt/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Da heo Wasabi",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 140,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/daChien/daHeoWasabi/banner.jpg",
+          "../../assets/product_detail/daChien/daHeoWasabi/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Da heo sạch",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/daChien/daHeoWasabi/real.jpg",
+      "../../assets/product_detail/daChien/daHeoWasabi/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  }
+]

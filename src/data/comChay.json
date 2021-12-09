@@ -1,0 +1,91 @@
+[
+  {
+    "name": "Cơm cháy chà bông",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 300,
+          "unit": "g"
+        },
+        "unitPrice": 55000,
+        "imageURL": [
+          "../../assets/product_detail/comChay/comChayChaBong/banner.jpg",
+          "../../assets/product_detail/comChay/comChayChaBong/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Cơm cháy",
+      "Chà bông",
+      "Muối",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/comChay/comChayChaBong/real.jpg",
+      "../../assets/product_detail/comChay/comChayChaBong/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Cơm cháy khô bò",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 300,
+          "unit": "g"
+        },
+        "unitPrice": 55000,
+        "imageURL": [
+          "../../assets/product_detail/comChay/comChayKhoBo/banner.jpg",
+          "../../assets/product_detail/comChay/comChayKhoBo/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Cơm cháy",
+      "Thịt bò",
+      "Muối",
+      "Đường",
+      "Ớt",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/comChay/comChayKhoBo/real.jpg",
+      "../../assets/product_detail/comChay/comChayKhoBo/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Cơm cháy khô gà",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 300,
+          "unit": "g"
+        },
+        "unitPrice": 55000,
+        "imageURL": [
+          "../../assets/product_detail/comChay/comChayKhoGa/banner.jpg",
+          "../../assets/product_detail/comChay/comChayKhoGa/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/comChay/comChayKhoGa/real.jpg",
+      "../../assets/product_detail/comChay/comChayKhoGa/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "name": "Chip Chip",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 500,
+          "unit": "g"
+        },
+        "unitPrice": 89000,
+        "imageURL": [
+          "../../assets/product_detail/keoMut/chipChip/banner.jpg",
+          "../../assets/product_detail/keoMut/chipChip/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Gelatin",
+      "Đường",
+      "Phụ gia"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/keoMut/chipChip/real.jpg",
+      "../../assets/product_detail/keoMut/chipChip/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Kẹo dâu tằm",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 400,
+          "unit": "g"
+        },
+        "unitPrice": 56000,
+        "imageURL": [
+          "../../assets/product_detail/keoMut/keoDau/banner.jpg",
+          "../../assets/product_detail/keoMut/keoDau/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Dâu",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/keoMut/keoDau/real.jpg",
+      "../../assets/product_detail/keoMut/keoDau/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Kẹo me cay",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 400,
+          "unit": "g"
+        },
+        "unitPrice": 56000,
+        "imageURL": [
+          "../../assets/product_detail/keoMut/keoMe/banner.jpg",
+          "../../assets/product_detail/keoMut/keoMe/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Me",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/keoMut/keoMe/real.jpg",
+      "../../assets/product_detail/keoMut/keoMe/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Ngũ cốc giảm cân",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 420,
+          "unit": "g"
+        },
+        "unitPrice": 69000,
+        "imageURL": [
+          "../../assets/product_detail/keoMut/nguCoc/banner.jpg",
+          "../../assets/product_detail/keoMut/nguCoc/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Ngũ cốc"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/keoMut/nguCoc/real.jpg",
+      "../../assets/product_detail/keoMut/nguCoc/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Xí muội nho",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 220,
+          "unit": "g"
+        },
+        "unitPrice": 55000,
+        "imageURL": [
+          "../../assets/product_detail/keoMut/xiMuoiNho/banner.jpg",
+          "../../assets/product_detail/keoMut/xiMuoiNho/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Nho tươi",
+      "Muối",
+      "Đường",
+      "Gừng"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/keoMut/xiMuoiNho/real.jpg",
+      "../../assets/product_detail/keoMut/xiMuoiNho/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  }
+]

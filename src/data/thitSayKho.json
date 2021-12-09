@@ -1,0 +1,252 @@
+[
+  {
+    "name": "Khô gà mix khô mực, heo",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 280,
+          "unit": "g"
+        },
+        "unitPrice": 99000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/kho3Vi/banner.jpg",
+          "../../assets/product_detail/thitSayKho/kho3Vi/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Thịt gà",
+      "Thịt heo",
+      "Mực",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/thitSayKho/kho3Vi/real.jpg",
+      "../../assets/product_detail/thitSayKho/kho3Vi/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khô bò miếng",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 200,
+          "unit": "g"
+        },
+        "unitPrice": 126000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/khoBoMieng200/banner.jpg",
+          "../../assets/product_detail/thitSayKho/khoBoMieng200/bottom.jpg"
+        ]
+      },
+      {
+        "weight": {
+          "value": 250,
+          "unit": "g"
+        },
+        "unitPrice": 149000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/khoBoMieng250/banner.jpg",
+          "../../assets/product_detail/thitSayKho/khoBoMieng250/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Thịt bò",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/thitSayKho/khoBoMieng200/real.jpg",
+      "../../assets/product_detail/thitSayKho/khoBoMieng200/top.jpg",
+      "../../assets/product_detail/thitSayKho/khoBoMieng250/real.jpg",
+      "../../assets/product_detail/thitSayKho/khoBoMieng250/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khô bò que",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 200,
+          "unit": "g"
+        },
+        "unitPrice": 126000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/khoBoQue/banner.jpg",
+          "../../assets/product_detail/thitSayKho/khoBoQue/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Thịt bò",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/thitSayKho/khoBoQue/real.jpg",
+      "../../assets/product_detail/thitSayKho/khoBoQue/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khô gà lá chanh",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 280,
+          "unit": "g"
+        },
+        "unitPrice": 65000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/khoga/banner.jpg",
+          "../../assets/product_detail/thitSayKho/khoga/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Thịt gà",
+      "Lá chanh",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/thitSayKho/khoga/real.jpg",
+      "../../assets/product_detail/thitSayKho/khoga/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khô gà bơ tỏi",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 280,
+          "unit": "g"
+        },
+        "unitPrice": 65000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/khoGaBoToi/banner.jpg",
+          "../../assets/product_detail/thitSayKho/khoGaBoToi/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Thịt gà",
+      "Bơ",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/thitSayKho/khoGaBoToi/real.jpg",
+      "../../assets/product_detail/thitSayKho/khoGaBoToi/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khô heo cháy bơ tỏi",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 160,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/khoHeo/banner.jpg",
+          "../../assets/product_detail/thitSayKho/khoHeo/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Thịt heo",
+      "Bơ",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/thitSayKho/khoHeo/real.jpg",
+      "../../assets/product_detail/thitSayKho/khoHeo/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Nui giòn",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 300,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/thitSayKho/nui/banner.jpg",
+          "../../assets/product_detail/thitSayKho/nui/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Nui",
+      "Thịt bò",
+      "Lá chanh",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/thitSayKho/nui/real.jpg",
+      "../../assets/product_detail/thitSayKho/nui/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  }
+]

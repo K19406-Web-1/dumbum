@@ -1,0 +1,191 @@
+[
+  {
+    "name": "Khô cá thiều miếng",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 200,
+          "unit": "g"
+        },
+        "unitPrice": 79000,
+        "imageURL": [
+          "../../assets/product_detail/haiSanKho/khoCaMieng/banner.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Cá thiều phi lê",
+      "Nước mắm",
+      "Tiêu sọ",
+      "Đường",
+      "Muối",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khô cá thiều que",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 180,
+          "unit": "g"
+        },
+        "unitPrice": 79000,
+        "imageURL": [
+          "../../assets/product_detail/haiSanKho/khoCaQue/banner.jpg",
+          "../../assets/product_detail/haiSanKho/khoCaQue/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Cá thiều khô",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/haiSanKho/khoCaQue/real.jpg",
+      "../../assets/product_detail/haiSanKho/khoCaQue/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khô mực hấp dừa",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 220,
+          "unit": "g"
+        },
+        "unitPrice": 99000,
+        "imageURL": [
+          "../../assets/product_detail/haiSanKho/khoMuc/banner.jpg",
+          "../../assets/product_detail/haiSanKho/khoMuc/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Mực tươi",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/haiSanKho/khoMuc/real.jpg",
+      "../../assets/product_detail/haiSanKho/khoMuc/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Mực cán tẩm vị",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 180,
+          "unit": "g"
+        },
+        "unitPrice": 89000,
+        "imageURL": [
+          "../../assets/product_detail/haiSanKho/mucCan/banner.jpg",
+          "../../assets/product_detail/haiSanKho/mucCan/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Mực tươi",
+      "Muối",
+      "Đường",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/haiSanKho/mucCan/real.jpg",
+      "../../assets/product_detail/haiSanKho/mucCan/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Mực sợi sốt chanh",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 180,
+          "unit": "g"
+        },
+        "unitPrice": 99000,
+        "imageURL": [
+          "../../assets/product_detail/haiSanKho/mucSoi/banner.jpg",
+          "../../assets/product_detail/haiSanKho/mucSoi/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Mực tươi",
+      "Sốt chanh Tomyum",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/haiSanKho/mucSoi/real.jpg",
+      "../../assets/product_detail/haiSanKho/mucSoi/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Mực xé tẩm gia vị",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 220,
+          "unit": "g"
+        },
+        "unitPrice": 89000,
+        "imageURL": [
+          "../../assets/product_detail/haiSanKho/mucXe/banner.jpg",
+          "../../assets/product_detail/haiSanKho/mucXe/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Mực tươi",
+      "Muối",
+      "Đường",
+      "Tỏi",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/haiSanKho/mucXe/real.jpg",
+      "../../assets/product_detail/haiSanKho/mucXe/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  }
+]

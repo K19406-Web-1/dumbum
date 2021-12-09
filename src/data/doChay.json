@@ -1,0 +1,340 @@
+[
+  {
+    "name": "Bánh tai heo",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 250,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/banhTaiHeo/banner.jpg",
+          "../../assets/product_detail/doChay/banhTaiHeo/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Bột mỳ",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/banhTaiHeo/real.jpg",
+      "../../assets/product_detail/doChay/banhTaiHeo/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Bắp giòn rang mắm",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 350,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/bapRangMam/banner.jpg",
+          "../../assets/product_detail/doChay/bapRangMam/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Muối",
+      "Đường",
+      "Ớt",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/bapRangMam/real.jpg",
+      "../../assets/product_detail/doChay/bapRangMam/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Bim Bim",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 350,
+          "unit": "g"
+        },
+        "unitPrice": 49000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/bimBim/banner.jpg",
+          "../../assets/product_detail/doChay/bimBim/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Bột mỳ",
+      "Muối",
+      "Đường",
+      "Ớt",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/bimBim/real.jpg",
+      "../../assets/product_detail/doChay/bimBim/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Chuối sấy giòn",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 300,
+          "unit": "g"
+        },
+        "unitPrice": 56000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/chuoiSay/banner.jpg",
+          "../../assets/product_detail/doChay/chuoiSay/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Chuối mè",
+      "Muối",
+      "Đường",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/chuoiSay/real.jpg",
+      "../../assets/product_detail/doChay/chuoiSay/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Đậu hà Lan 5 vị Wasabi",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 430,
+          "unit": "g"
+        },
+        "unitPrice": 69000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/dauHaLan5Vi/banner.jpg",
+          "../../assets/product_detail/doChay/dauHaLan5Vi/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Đậu Hà Lan",
+      "Wasabi",
+      "Phô mai",
+      "Bột rau củ",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/dauHaLan5Vi/real.jpg",
+      "../../assets/product_detail/doChay/dauHaLan5Vi/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Đậu Hà Lan Wasabi",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 400,
+          "unit": "g"
+        },
+        "unitPrice": 69000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/dauHaLanWasabi/banner.jpg",
+          "../../assets/product_detail/doChay/dauHaLanWasabi/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Đậu Hà Lan",
+      "Wasabi",
+      "Bột mỳ",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/dauHaLanWasabi/real.jpg",
+      "../../assets/product_detail/doChay/dauHaLanWasabi/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Gạo lứt rong biển",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 300,
+          "unit": "g"
+        },
+        "unitPrice": 69000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/gaoLut/banner.jpg",
+          "../../assets/product_detail/doChay/gaoLut/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Gạo lứt",
+      "Rong biển",
+      "Muối",
+      "Đường",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/gaoLut/real.jpg",
+      "../../assets/product_detail/doChay/gaoLut/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Khoai sấy",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 300,
+          "unit": "g"
+        },
+        "unitPrice": 79000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/khoaiSay/banner.jpg",
+          "../../assets/product_detail/doChay/khoaiSay/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Khoai các loại",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/khoaiSay/real.jpg",
+      "../../assets/product_detail/doChay/khoaiSay/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Mít sấy Thái",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 200,
+          "unit": "g"
+        },
+        "unitPrice": 79000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/mitSay/banner.jpg",
+          "../../assets/product_detail/doChay/mitSay/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Mít",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/mitSay/real.jpg",
+      "../../assets/product_detail/doChay/mitSay/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Rong biển cháy tỏi",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 130,
+          "unit": "g"
+        },
+        "unitPrice": 69000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/rongBien/banner.jpg",
+          "../../assets/product_detail/doChay/rongBien/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Rong biển",
+      "Muối",
+      "Đường",
+      "Dầu ăn",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  },
+  {
+    "name": "Trái cây sấy",
+    "productDetails": [
+      {
+        "weight": {
+          "value": 250,
+          "unit": "g"
+        },
+        "unitPrice": 67000,
+        "imageURL": [
+          "../../assets/product_detail/doChay/traiCaySay/banner.jpg",
+          "../../assets/product_detail/doChay/traiCaySay/bottom.jpg"
+        ]
+      }
+    ],
+    "materials": [
+      "Trái cây các loại",
+      "Muối",
+      "Đường",
+      "Gia vị"
+    ],
+    "lifeTimeByMonth": 6,
+    "illustratedImageURL": [
+      "../../assets/product_detail/doChay/traiCaySay/real.jpg",
+      "../../assets/product_detail/doChay/traiCaySay/top.jpg"
+    ],
+    "howToUse": "Dùng ăn trực tiếp",
+    "storageCondition": "Nhiệt độ thường",
+    "madeBy": "Việt Nam"
+  }
+]
