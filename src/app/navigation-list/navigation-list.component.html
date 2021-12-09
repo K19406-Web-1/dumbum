@@ -1,0 +1,6 @@
+<!--<p>navigation-list works!</p>-->
+<div class="box-category">
+    <h1>{{menu.heading}}</h1>
+    <button style="margin-top: 10px; text-align: center; width: 280px" class="btn btn-accent rounded-hard" name="product" (click)="item.rediect()"
+      *ngFor="let item of menu.items">{{item.value}}</button>
+  </div>
