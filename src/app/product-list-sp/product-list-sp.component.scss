@@ -1,0 +1,14 @@
+.box-product {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+.box-category{
+    width: 300px;
+    height: 350px;
+    border-radius: 10px;
+    border: 2px solid var(--accent);
+    box-shadow: 2px 2px 5px var(--third);
+    padding: 20px;
+    background-color: #FFFBFB;
+  }
