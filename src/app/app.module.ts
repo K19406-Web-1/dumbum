@@ -5,7 +5,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTabsModule } from '@angular/material/tabs';
-import {MatDialogModule} from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -25,6 +25,7 @@ import { SpinnerComponent } from './spinner/spinner.component';
 import { SubscribeInformComponent } from './subscribe-inform/subscribe-inform.component';
 import { NavigationListComponent } from './navigation-list/navigation-list.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -39,6 +40,7 @@ import { IntroPageComponent } from './intro-page/intro-page.component';
     SignInComponent,
     SpinnerComponent,
     NavigationListComponent,
+    ContactComponent,
     IntroPageComponent
   ],
   imports: [
@@ -54,8 +56,11 @@ import { IntroPageComponent } from './intro-page/intro-page.component';
       { path: '', component: HomePageComponent },
       { path: 'product-detail', component: ProductDetailComponent },
       { path: 'product-list', component: ProductListComponent },
-      { path: 'checkout', component: CheckoutComponent},
-      { path: 'policy', component: PolicyComponent}
+      { path: 'checkout', component: CheckoutComponent },
+      { path: 'policy', component: PolicyComponent },
+      { path: 'contact-us', component: ContactComponent },
+      { path: 'intro-page', component: IntroPageComponent },
+      { path: 'subscribe-inform', component: IntroPageComponent }
     ]),
   ],
   providers: [],

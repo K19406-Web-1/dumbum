@@ -120,7 +120,7 @@ body > main {
   box-shadow: none !important;
 }
 
-.btn:hover {
+.btn:hover, .btn.activated {
   box-shadow: var(--shadow);
 }
 
@@ -130,7 +130,7 @@ body > main {
   border-color: var(--primary);
 }
 
-.btn-primary:hover {
+.btn-primary:hover, .btn-primary.activated {
   background: #fff;
   border: 1px solid var(--primary);
   color: var(--primary);
@@ -142,7 +142,7 @@ body > main {
   border-color: var(--accent);
 }
 
-.btn-accent:hover {
+.btn-accent:hover, .btn-accent.activated {
   background: #fff;
   border: 1px solid var(--accent);
   color: var(--third);

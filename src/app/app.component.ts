@@ -26,14 +26,4 @@ export class AppComponent implements AfterContentInit {
   get loading() {
     return isLoading;
   }
-
-  loadComChay() {
-    fetch('assets/data/comChay.json')
-      .then(response => {
-        if (response.ok) {
-          response.json()
-            .then(data => console.log(data as Product[]));
-        }
-      })
-  }
 }

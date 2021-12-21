@@ -1,60 +1,63 @@
-<p>contact works!</p>
-<picture>
+<div class="py-3">
+  <picture>
     <source srcset="../../assets/small-gioithieu.jpg" media="(max-width: 600px)">
     <source srcset="../../assets/GIOITHIEU.jpg" media="(max-width: 1500px)">
     <source srcset="../../assets/small-gioithieu2.jpg">
     <img src="../../assets/GIOITHIEU.jpg" alt="Flowers">
-</picture>
+  </picture>
 
-<div class="title">
+  <div class="title">
+
+  </div>
+  <div class="row">
+    <div class="col-1">
+      <p class="title">LIÊN HỆ VỚI DUMBUM</p>
+      <h3 class="text">Địa chỉ</h3>
+      <p>Số 669, Khu bố 3, Quốc lộ 1A, Phường Linh xuân, Thành phố Thủ Đức</p>
+      <div class="text-contact">
+        <div>
+          <h3 class="text">Điện thoại</h3>
+          <p style="margin-right: 30px;">0868918629</p>
+        </div>
+        <div>
+          <h3 class="text">Email</h3>
+          <p style="margin-right: 30px;">dumbum@gmail.com</p>
+        </div>
+        <div>
+          <h3 class="text">Tax</h3>
+          <p style="margin-right: 30px;">123456789</p>
+        </div>
+
+      </div>
+      <p class="title">LIÊN HỆ</p>
+      <div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingName" placeholder="Họ và tên">
+          <label for="floatingName">Họ và tên</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingName" placeholder="Email">
+          <label for="floatingName">Email</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingName" placeholder="Số điện thoại">
+          <label for="floatingName">Số điện thoại</label>
+        </div>
+        <div class="form-floating">
+          <input type="text" class="form-control" id="floatingName" placeholder="Mục đích liên hệ">
+          <label for="floatingName">Mục đích liên hệ</label>
+        </div>
+        <div style="text-align: center;">
+          <button type="button" class="btn btn-outline-warning">Gửi</button>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="col-2">
+      <app-navigation-list [menu]="menu"></app-navigation-list>
+    </div>
+  </div>
 
 </div>
-<div class="row">
-    <div class="col-1">
-        <p class="title">LIÊN HỆ VỚI DUMBUM</p>
-           <h3 class="text">Địa chỉ</h3>
-           <p>Số 669, Khu bố 3, Quốc lộ 1A, Phường Linh xuân, Thành phố Thủ Đức</p>
-        <div class="text-contact">
-           <div >
-                <h3 class="text">Điện thoại</h3>
-                <p style="margin-right: 30px;">0868918629</p>
-           </div>
-           <div>
-                <h3 class="text">Email</h3>
-                <p style="margin-right: 30px;">dumbum@gmail.com</p>
-           </div>
-           <div>
-                <h3 class="text">Tax</h3>
-                <p style="margin-right: 30px;">123456789</p>
-           </div>
-                          
-        </div>
-        <p class="title">LIÊN HỆ</p>
-           <div >
-            <input class="form-control" type="text" placeholder="Họ và tên" aria-label="default input example">
-            <input class="form-control" type="text" placeholder="Email" aria-label="default input example">
-            <input class="form-control" type="text" placeholder="Số điện thoại" aria-label="default input example">
-            <input class="form-control" type="text" placeholder="Mục đích liên hệ" aria-label="default input example">
-            <div style="text-align: center;" >
-                <button type="button" class="btn btn-outline-warning" >Gửi</button>
-            </div>
-            
-
-        </div>
-           
-    </div>
-   
-    <div class="col-2">
-     
-            <div id="rectangle">
-                <div class="category"><p>HỖ TRỢ KHÁCH HÀNG</p></div>
-                <div>
-                    <h3 class="container">Giới thiệu dumbum</h3>
-                    <h3 class="container" >Thông tin chi tiết</h3>
-                    <h3 class="container" >Liên hệ</h3>
-                </div>
-                <div>
-                    <img src="../../assets/LIÊN HỆ.jpg" class="img">
-                </div>
-      </div>
-    </div>

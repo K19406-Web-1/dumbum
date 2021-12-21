@@ -8,7 +8,7 @@
         <div id="navContent" class="collapse w-100 py-2">
           <div id="navContentContainer" class="flex-betweent-center flex-grow-1 navbar-nav">
             <div id="navContentTitle" class="flex-betweent-center w-50 px-0 navbar-nav">
-              <a class="nav-link" *ngFor="let item of mainPages.items">{{item.value}}</a>
+              <a class="nav-link" *ngFor="let item of mainPages.items" (click)="item.rediect()">{{item.value}}</a>
             </div>
             <hr>
             <div id="navContentAction" class="flex-betweent-center fs-3" style="width: 200px; height: 50px;">
@@ -28,8 +28,8 @@
     </div>
     <div class="bg-accent d-flex py-2">
       <div class="container flex-betweent-center">
-        <button class="btn btn-accent rounded-hard" name="product"
-          *ngFor="let item of categories.items">{{item.value}}</button>
+        <button class="btn btn-accent rounded-hard" name="product" *ngFor="let item of categories.items"
+          [class.activated]="item.isCurrentTab(true)" (click)="item.rediect()">{{item.value}}</button>
         <div id="search" class="input-group w-25 d-flex" style="min-width: max-content;">
           <div class="form-floating small flex-grow-1">
             <input type="search" class="form-control rounded-0 rounded-start pb-0 pt-3" name="search" id="search"

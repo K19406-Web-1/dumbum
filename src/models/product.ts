@@ -35,3 +35,16 @@ export interface ProductDetail {
   unitPrice: number;
   imageURL: string[];
 }
+
+export interface ProductType
+{
+  categories:number;
+  highlights:string[];
+  promotions:[];
+  bestSeller:string[];
+}
+
+interface ProductPromotionType{
+  name:string,
+  
+}

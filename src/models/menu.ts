@@ -31,9 +31,9 @@ export class MenuItem {
 
   isCurrentTab(justStartWith?: boolean): boolean {
     if (justStartWith) {
-      return location.pathname.toLowerCase().startsWith(this.href!.toLowerCase(), 1);
+      return (location.pathname + location.search).toLowerCase().startsWith(this.href!.toLowerCase(), 1);
     }
-    return location.pathname.substr(1).toLowerCase() === this.href!.toLowerCase();
+    return location.href.substr(1).toLowerCase() === this.href!.toLowerCase();
   }
 
   rediect(): void {
