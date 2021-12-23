@@ -26,6 +26,7 @@ import { SubscribeInformComponent } from './subscribe-inform/subscribe-inform.co
 import { NavigationListComponent } from './navigation-list/navigation-list.component';
 import { IntroPageComponent } from './intro-page/intro-page.component';
 import { ContactComponent } from './contact/contact.component';
+import { CartComponent } from './cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,9 @@ import { ContactComponent } from './contact/contact.component';
     SpinnerComponent,
     NavigationListComponent,
     ContactComponent,
-    IntroPageComponent
+    IntroPageComponent,
+    CartComponent,
+    CheckoutComponent
   ],
   imports: [
     BrowserModule,
@@ -60,7 +63,8 @@ import { ContactComponent } from './contact/contact.component';
       { path: 'policy', component: PolicyComponent },
       { path: 'contact-us', component: ContactComponent },
       { path: 'intro-page', component: IntroPageComponent },
-      { path: 'subscribe-inform', component: IntroPageComponent }
+      { path: 'subscribe-inform', component: IntroPageComponent },
+      { path: 'checkout', component: CheckoutComponent }
     ]),
   ],
   providers: [],

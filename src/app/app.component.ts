@@ -1,5 +1,4 @@
 import { AfterContentInit, Component } from '@angular/core';
-import { Product } from 'src/models/product';
 
 let isLoading = true;
 

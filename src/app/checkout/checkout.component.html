@@ -1,105 +1,45 @@
 <div class="content mb-5">
-    <div class="flex">
+  <div class="flex">
     <div class="m-5">
-        <div class="size">THÔNG TIN KHÁCH HÀNG</div>
-        <div class="form-floating mb-5 mt-5">
-            <input style="width: 300px" type="text" class="form-control" id="floatingName" placeholder="Họ và tên">
-            <label for="floatin gName">Họ và tên</label>
-        </div>
-        <div class="form-floating mb-5">
-            <input type="text" class="form-control" id="floatingName" placeholder="Số điện thoại">
-            <label for="floatingName">Số điện thoại</label>
-        </div>
-        <div class="form-floating mb-5">
-            <input type="text" class="form-control" id="floatingName" placeholder="Địa chỉ nhận hàng">
-            <label for="floatingName">Địa chỉ nhận hàng</label>
-        </div>
-        <div class="form-floating mb-5">
-            <input type="text" class="form-control" id="floatingName" placeholder="Thành phố">
-            <label for="floatingName">Thành phố</label>
-        </div>
-        <div class="form-floating mb-5">
-            <input type="text" class="form-control" id="floatingName" placeholder="Quận huyện">
-            <label for="floatingName">Quận huyện</label>
-        </div>
+      <div class="size">THÔNG TIN KHÁCH HÀNG</div>
+      <div class="form-floating mb-5 mt-5">
+        <input style="width: 300px" type="text" class="form-control" id="floatingName" placeholder="Họ và tên">
+        <label for="floatin gName">Họ và tên</label>
+      </div>
+      <div class="form-floating mb-5">
+        <input type="text" class="form-control" id="floatingName" placeholder="Số điện thoại">
+        <label for="floatingName">Số điện thoại</label>
+      </div>
+      <div class="form-floating mb-5">
+        <input type="text" class="form-control" id="floatingName" placeholder="Địa chỉ nhận hàng">
+        <label for="floatingName">Địa chỉ nhận hàng</label>
+      </div>
+      <div class="form-floating mb-5">
+        <input type="text" class="form-control" id="floatingName" placeholder="Thành phố">
+        <label for="floatingName">Thành phố</label>
+      </div>
+      <div class="form-floating mb-5">
+        <input type="text" class="form-control" id="floatingName" placeholder="Quận huyện">
+        <label for="floatingName">Quận huyện</label>
+      </div>
     </div>
+    <app-cart></app-cart>
+  </div>
+  <div>
     <div>
-        <div class="size box m-5">SẢN PHẨM ĐÃ MUA</div>
-        <div class="box1 m-5">
-            <div class="card m-4">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="../../assets/comchay.jpg" class="img m-4">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <p class="card-title">Cơm Cháy</p>
-                            <div class="flex">
-                                <div>
-                                    <input class="form__button" type="button" value="-">
-                                    <input class="number" type="number" value="2">
-                                    <input class="form__button" type="button" value="+">
-                                </div>
-                                <p class="price">40.000 VNĐ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="card m-4">
-                <div class="row g-0">
-                    <div class="col-md-4">
-                        <img src="../../assets/rongbien.jpg" class="img m-4">
-                    </div>
-                    <div class="col-md-8">
-                        <div class="card-body">
-                            <p class="card-title">Rong biển</p>
-                            <div class="flex">
-                                <div>
-                                    <input class="form__button" type="button" value="-">
-                                    <input class="number" type="number" value="1">
-                                    <input class="form__button" type="button" value="+">
-                                </div>
-                                <p class="price">65.000 VNĐ</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <input class="btn button" type="button" value="Mã khuyến mãi ->">
-            <hr>
-            <div class="flex">
-                <label style="margin-left: 50px;">Tổng tiền</label>
-                <p class="cal">105.000 VNĐ</p>
-            </div>
-            <div class="flex">
-                <label style="margin-left: 50px;">Phí ship</label>
-                <p class="cal">35.000 VNĐ</p>
-            </div>
-            <hr style="margin-top: 50px">
-            <div class="sum">
-                <label style="margin-left: 50px;">Tổng cộng</label>
-                <p class="cal">140.000 VNĐ</p>
-            </div>
-            <input class="btn pay" type="button" value="Thanh toán">
+      <div class="size m-5">HÌNH THỨC THANH TOÁN</div>
+      <div class="flex">
+        <div class="form-floating mb-5">
+          <input class="form-check-input" type="radio">
+          <input type="text" class="form-control" id="floatingName" placeholder="Thanh toán khi nhận hàng">
+          <label for="floatingName">Thanh toán khi nhận hàng</label>
         </div>
-    </div>
-    </div>
-    <div>
-        <div>
-            <div class="size m-5">HÌNH THỨC THANH TOÁN</div>
-            <div class="flex">
-                <div class="form-floating mb-5">
-                    <input class="form-check-input" type="radio">
-                    <input type="text" class="form-control" id="floatingName" placeholder="Thanh toán khi nhận hàng">
-                    <label for="floatingName">Thanh toán khi nhận hàng</label>
-                </div>
-                <div class="form-floating mb-5">
-                    <input class="form-check-input" type="radio">
-                    <input type="text" class="form-control" id="floatingName" placeholder="Thanh toán bằng E-banking">
-                    <label for="floatingName">Thanh toán bằng E-banking</label>
-                </div>
-            </div>
+        <div class="form-floating mb-5">
+          <input class="form-check-input" type="radio">
+          <input type="text" class="form-control" id="floatingName" placeholder="Thanh toán bằng E-banking">
+          <label for="floatingName">Thanh toán bằng E-banking</label>
         </div>
+      </div>
     </div>
+  </div>
 </div>

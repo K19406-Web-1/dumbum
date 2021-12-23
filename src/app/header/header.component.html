@@ -12,7 +12,7 @@
             </div>
             <hr>
             <div id="navContentAction" class="flex-betweent-center fs-3" style="width: 200px; height: 50px;">
-              <i class="bi bi-cart2" matBadge="2"></i>
+              <i class="bi bi-cart2 btn-out" matBadge="2" (click)="openCart()"></i>
               <hr class="vr h-100 m-0">
               <a *ngIf="currentUser==null" class="nav-link" (click)="upSignUp()">Đăng nhập</a>
               <img *ngIf="currentUser" class="rounded-circle small" [src]="currentUser.photoURL"
