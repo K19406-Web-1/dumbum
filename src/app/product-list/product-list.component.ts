@@ -1,9 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { categories, loadProducts, types } from 'src/models/dbcontext';
-import { Menu, MenuItem } from 'src/models/menu';
-import { Product, ProductBase } from 'src/models/product';
+import { loadProducts } from 'src/models/dbcontext';
+import { Menu, MenuItem, MenuItemIsCurrentOptions } from 'src/models/menu';
+import { Product } from 'src/models/product';
 
-const TYPE_PATH = location.href + '&type=';
 
 @Component({
   selector: 'app-product-list',
@@ -12,23 +11,25 @@ const TYPE_PATH = location.href + '&type=';
 })
 export class ProductListComponent implements OnInit {
 
-  categories: Menu = new Menu([
-    new MenuItem('Sản phẩm nổi bật', TYPE_PATH + 0),
-    new MenuItem('Sản phẩm khuyến mãi', TYPE_PATH + 1),
-    new MenuItem('Sản phẩm bán chạy', TYPE_PATH + 2),
-    new MenuItem('Tất cả sản phẩm', TYPE_PATH + 3)
-  ], 'DANH MỤC');
+  categories!: Menu;
 
   products!: Product[];
 
   constructor() {
-    let newSearch = new URLSearchParams(location.search);
-let searchTypes = newSearch.getAll('type');
-if (searchTypes.length > 1) {
-  newSearch.delete('type');
-  newSearch.set('type', searchTypes.pop()!);
-  location.search = newSearch.toString();
-}
+    let urlParams = new URLSearchParams(location.search);
+    if (!urlParams.has('type')) {
+      urlParams.set('type', '3');
+      location.search = urlParams.toString();
+    }
+    urlParams.set('type', 'typeValue');
+    const TYPE_PATH = location.pathname + '?' + urlParams.toString();
+
+    this.categories = new Menu([
+      new MenuItem('Sản phẩm nổi bật', TYPE_PATH.replace('typeValue', '0')),
+      new MenuItem('Sản phẩm khuyến mãi', TYPE_PATH.replace('typeValue', '1')),
+      new MenuItem('Sản phẩm bán chạy', TYPE_PATH.replace('typeValue', '2')),
+      new MenuItem('Tất cả sản phẩm', TYPE_PATH.replace('typeValue', '3'))
+    ], 'DANH MỤC', MenuItemIsCurrentOptions.search);
   }
 
   ngOnInit(): void {
@@ -43,6 +44,6 @@ if (searchTypes.length > 1) {
 
     //Load data
     loadProducts(category, type)
-      .then(data => data = this.products = data);
+      .then(data => this.products = data);
   }
 }

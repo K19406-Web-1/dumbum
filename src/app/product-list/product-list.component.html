@@ -1,8 +1,12 @@
 <!--<p>product-list-sp works!</p>-->
 <img src="../../assets/BANNER fi.jpg" class="full-width m-0">
-<div class="d-flex justify-content-between p-3 flex-grow-1">
-  <app-navigation-list [menu]="categories" ></app-navigation-list>
-      <div class="d-flex justify-content-between flex-wrap">
-        <app-product-template *ngFor="let item of products" [product]="item" ></app-product-template>
-      </div>
+  <div class="d-flex pt-3 pb-3">
+    <div style="margin-right: 50px;">
+      <app-navigation-list [menu]="categories"></app-navigation-list>
+    </div>
+    <div>
+        <div class="d-flex justify-content-start flex-wrap" style="width: 100%">
+          <app-product-template class="mx-3" *ngFor="let item of products" [product]="item"></app-product-template>
+        </div>
+    </div>
 </div>

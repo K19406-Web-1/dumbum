@@ -1,41 +1,42 @@
-<div class="box">
-  <!-- <div style="font-size: 16px;">Trang chủ / Thịt sấy khô / Khô gà lá chanh xé cay</div> -->
+<div class="box py-3">
   <ol class="breadcrumb">
     <li *ngFor="let item of path.items" class="breadcrumb-item">
       <a [href]="item.href">{{item.value}}</a>
     </li>
   </ol>
   <div class="box-product">
-    <div class="d-flex" style="flex-basis: 49%;" >
+    <div class="d-flex" style="flex-basis: 49%;">
       <div>
-        <img class="img-large" src="../../assets/product_detail/thitSayKho/khoga/banner.jpg" alt="Không thể tải được hình ảnh">
-        <div style="display: flex; flex-direction: row;">
-          <img class="img-small" src="../../assets/product_detail/thitSayKho/khoga/banner.jpg" alt="Không tải được hình ảnh">
-          <img class="img-small" src="../../assets/product_detail/thitSayKho/khoga/bottom.jpg" alt="Không tải được hình ảnh">
+        <img class="img-large" [src]="currentImageURL"
+          alt="Không thể tải được hình ảnh">
+        <div class="d-flex">
+          <div *ngFor="let item of product.productDetails[0].imageURL">
+            <img class="img-small" style="cursor: pointer;" [src]="item" (click)="onImageChange(item)">
+          </div>
+
         </div>
+
       </div>
     </div>
     <div style="flex-basis: 49%;">
-      <p style="font-size: 24px ; font-weight: bold; color: var(--accent);">KHÔ GÀ LÁ CHANH XÉ CAY 280G</p>
+      <p class="text-strong text-accent fs-3">
+        {{product.name}} {{product.productDetails[0].weight.value}}{{product.productDetails[0].weight.unit}}</p>
       <div class="unit-price-box">
-        <p style=" font-size: 30px; font-weight: bold; color: var(--primary);">61.000 đồng</p>
+        <p style="font-weight: bold; color: var(--primary);" class="fs-3">{{product.productDetails[0].unitPrice |
+          currency}}</p>
       </div>
       <div class="text" style="margin: 20px 0px; color: var(--accent); font-weight: bold; display: flex; ">
-        <label for="quality">Số lượng:</label>
-        <div class="buttons_added input-group" style=" width: auto; font-size: 14px;">
-          <input class="btn-accent form-control" type="button" value="-" style="height:2.2rem; font-size:1rem; width:1.9rem;" >
-          <input  class="form-control" max="Số tối đa" min="Số tối thiểu" name="" type="text"  id="qty" style="height:2.2rem; font-size:1rem; width:2.5rem;">
-          <input class="btn-accent form-control" type="button" value="+" style="height:2.2rem; font-size:1rem; width:1.9rem;" >
-          
-        </div>
-       
+        <label for="quality" style="font-size: 1.5rem!important">Số lượng:</label>
+        <app-quantity-input #quantityInput style="font-size: 1.2rem!important"></app-quantity-input>
+
+
       </div>
       <div class="form-button">
-        <input class="btn btn-accent"  type="button" value="THÊM VÀO GIỎ HÀNG">
-        <input class="btn btn-accent"  type="button" value="MUA NGAY">
+        <input class="btn btn-accent" type="button" value="THÊM VÀO GIỎ HÀNG" (click)="addToCart()">
+        <a href="checkout"><input class="btn btn-accent" type="button" value="MUA NGAY"></a>
       </div>
       <div class="text">
-        <i class="bi bi-truck"></i> <span style="font-weight: bold;"> Miễn phí vận chuyển</span>
+        <i class="bi bi-truck"></i><span style="font-weight: bold;"> Miễn phí vận chuyển</span>
         <ul>
           <li>Giao hàng miễn phí với mức giá cố định từ 300K trở lên</li>
         </ul>
@@ -51,45 +52,42 @@
   </div>
   <div class="box-detail box-detail--1 ">
     <div style="padding: 20px;">
-      <p class="text-heading">MÔ TẢ CHI TIẾT SẢN PHẨM</p>
+      <p class="text-heading fs-3">MÔ TẢ CHI TIẾT SẢN PHẨM</p>
       <div class="text">
         <ul>
-          <li>Thành phần: thịt gà tươi, muối, đường, tỏi, ớt, dầu ăn, gia vị,...</li>
-          <li>Hướng dẫn sử dụng: dùng ăn trực tiếp</li>
-          <li>Hướng dẫn bảo quản: nhiệt độ thường</li>
-          <li>Trọng lượng tịnh: 280g (tính cả bao bì)</li>
-          <li>Hạn sử dụng: 06 tháng kể từ ngày sản xuất</li>
-          <li>Xuất xứ: Việt Nam</li>
+          <li>Thành phần: {{product.materials.join(', ')}}</li>
+          <li>Hướng dẫn sử dụng: {{product.howToUse}}</li>
+          <li>Hướng dẫn bảo quản: {{product.storageCondition}}</li>
+          <li>Trọng lượng tịnh: {{product.productDetails[0].weight.value}}{{product.productDetails[0].weight.unit}}
+            (tính cả bao bì)</li>
+          <li>Hạn sử dụng: {{product.lifeTimeByMonth}} tháng kể từ ngày sản xuất</li>
+          <li>Xuất xứ: {{product.madeBy}}</li>
         </ul>
       </div>
-      <div style="text-align: center;"><img class="img-detail" src="../../assets/product_detail/thitSayKho/khoga/real.jpg"
-          alt="Không thể tải được hình ảnh"></div>
-      <div style="text-align: center;"><img class="img-detail" src="../../assets/product_detail/thitSayKho/khoga/top.jpg"
-          alt="Không thể tải được hình ảnh"></div>
+      <div style="text-align: center;" *ngFor="let item of product.illustratedImageURL">
+        <img class="img-detail" [src]="item">
+      </div>
       <p class="text">Cảm ơn các bạn, chúc các bạn ngon miệng với Khô gà lá chanh DumBum <br>À đừng quên là chúng mình
-        còn Khô heo, Khô mực, Khô mix 3 vị nhé !!</p>
+        còn có các sản phẩm khác nhé </p>
     </div>
   </div>
   <div class="box-detail" style="margin-bottom: 50px">
     <div style="padding: 20px;">
-      <p class="text-heading">ĐÁNH GIÁ VÀ NHẬN XÉT SẢN PHẨM</p>
+      <p class="text-heading fs-3">ĐÁNH GIÁ VÀ NHẬN XÉT SẢN PHẨM</p>
       <div class="box-review">
-        <div class="d-flex" style="justify-content: space-between; flex-basis: 60%;" >
+        <div class="d-flex" style="justify-content: space-between; flex-basis: 60%;">
           <div class="review">
-            <p class="text" style="font-size: 1.2rem;">Đánh giá trung bình</p>
-           <p style="font-weight: bold; font-size: 4rem; color: var(--third); line-height: 1;">5/5</p>
-          <div>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
-            <i class="bi bi-star-fill"></i>
+            <p class="text">Đánh giá trung bình</p>
+            <p style="font-weight: bold; font-size: 4rem!important; color: var(--third); line-height: 1;">5/5</p>
+            <div>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+              <i class="bi bi-star-fill"></i>
+            </div>
+            <p class="text">1 đánh giá & 0 nhận xét</p>
           </div>
-          <p class="text">1 đánh giá & 0 nhận xét</p>
-
-          </div>
-    
-
           <div class="feedback" style="display: flex; flex-direction: column;">
             <div>
               <p>5</p><i class="bi bi-star-fill"></i><progress max="100" value="100"></progress>
@@ -113,8 +111,8 @@
             </div>
           </div>
         </div>
-        
-        <div class="form-button" style="display: flex; flex-direction: column; flex-basis: 30%; " >
+
+        <div class="form-button" style="display: flex; flex-direction: column; flex-basis: 30%; ">
           <p style="width:100%; text-align: center;" class="text" for="">Bạn đã từng dùng sản phẩm này?</p>
           <input class="btn btn-accent" type="button" value="Gửi đánh giá của bạn">
         </div>
@@ -122,4 +120,3 @@
     </div>
   </div>
 </div>
-

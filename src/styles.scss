@@ -68,6 +68,24 @@ body {
   flex-direction: column;
 }
 
+p,
+span,
+li,
+label {
+  font-size: 1.22rem !important;
+  line-height: 1.2;
+}
+
+@media (max-width: 1000px) {
+  p,
+  span,
+  li,
+  label {
+    font-size: 1rem !important;
+    line-height: 1;
+  }
+}
+
 html {
   display: flex;
   height: 100vh;
@@ -153,7 +171,7 @@ body > main {
 
 .text-strong {
   text-transform: uppercase;
-  font-weight: 800;
+  font-weight: 700;
   color: var(--primary);
   cursor: pointer;
 }

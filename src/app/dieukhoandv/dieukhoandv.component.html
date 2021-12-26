@@ -1,58 +1,37 @@
-<p>dieukhoandv works!</p>
-<p>chinhsachbaomat works!</p>
-<div class="bar">
-    <a href="./chinhsach.component.html">Trang Chủ</a>
-    <a href="./dieukhoandv.component.html"> / Điều khoản dịch vụ</a>
-</div>
-<div class="title">
-    <p class="title">ĐIỀU KHOẢN DỊCH VỤ</p>
-</div>
-<div class="row">
-    <div class="col-1">
+<div class="d-flex justify-content-between py-5 text-primary">
+    <div style="padding-right: 40px; flex-basis: 100%">
+        <p class="title fs-3 fw-bold text-accent">ĐIỀU KHOẢN DỊCH VỤ</p>
             <ol>
-                <li>Mục đích </li>
-                <p style=" text-align: justify;">
+                <li class="fw-bold text-accent">Mục đích</li>
+                <p style=" text-align: justify;">Chào mừng quý khách hàng đến với website <b>doanvatdumbum.web.app</b> chúng tôi.</p>
 
-                    Chào mừng quý khách hàng đến với website dumbum. com chúng tôi. <br>
+                    <p style=" text-align: justify;">Khi quý khách hàng truy cập vào trang website của chúng tôi có nghĩa là quý khách đồng ý với các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần nào trong Điều khoản mua bán hàng hóa này, vào bất cứ lúc nào. Các thay đổi có hiệu lực ngay khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng trang web, sau khi các thay đổi về điều khoản này được đăng tải, có nghĩa là quý khách chấp nhận với những thay đổi đó.</p>
 
-                    Khi quý khách hàng truy cập vào trang website của chúng tôi có nghĩa là quý khách đồng ý với các điều khoản này. Trang web có quyền thay đổi, chỉnh sửa, thêm hoặc lược bỏ bất kỳ phần nào trong Điều khoản mua bán hàng hóa này, vào bất cứ lúc nào. Các thay đổi có hiệu lực ngay khi được đăng trên trang web mà không cần thông báo trước. Và khi quý khách tiếp tục sử dụng trang web, sau khi các thay đổi về điều khoản này được đăng tải, có nghĩa là quý khách chấp nhận với những thay đổi đó.
-                    
-                    Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.
-                    
-                   
-                </p>
-                <li>Hướng dẫn sử dụng website</li>
-                <p style="text-align: justify;">  
+                    <p style=" text-align: justify;">Quý khách hàng vui lòng kiểm tra thường xuyên để cập nhật những thay đổi của chúng tôi.</p>
+
+
+
+                <li class="fw-bold text-accent">Hướng dẫn sử dụng Website</li>
+                <p style="text-align: justify;">
                     Khi vào web của chúng tôi, khách hàng phải đảm bảo đủ 18 tuổi, hoặc truy cập dưới sự giám sát của cha mẹ hay người giám hộ hợp pháp. Khách hàng đảm bảo có đầy đủ hành vi dân sự để thực hiện các giao dịch mua bán hàng hóa theo quy định hiện hành của pháp luật Việt Nam.
 
                     Trong suốt quá trình đăng ký, quý khách đồng ý nhận email quảng cáo từ website. Nếu không muốn tiếp tục nhận mail, quý khách có thể từ chối bằng cách nhấp vào đường link ở dưới cùng trong mọi email quảng cáo.
                 </p>
-                <li> Thanh toán an toàn và tiện lợi: </li>
+                <li class="fw-bold text-accent">Thanh toán an toàn và tiện lợi</li>
                 <p style="text-align: justify;">
                     Người mua có thể tham khảo các phương thức thanh toán sau đây và lựa chọn áp dụng phương thức phù hợp:
-                    Thanh toán sau (COD – giao hàng và thu tiền tận nơi)
+                    Thanh toán sau (COD - giao hàng và thu tiền tận nơi)
                     Quý khách có thể tham khảo thêm Chính sách đổi trả và Bảo mật thông tin thêm ở phần Menu bên phải.
 
-                    <br> 
-                    Hotline:  086. 8918629 ( làm việc trong giờ hành chính)
+                    <br>
+                    Hotline:  0916 113 115 ( làm việc trong giờ hành chính)
                     <br>
                         Email: dumbum123@gmail.com
                 </p>
             </ol>
     </div>
-    <div class="col-2">
-     
-            <div id="rectangle">
-                <div class="category"><p>HỖ TRỢ KHÁCH HÀNG</p></div>
-                <div>
-                    <h3 class="container" href="./chinhsach.component.html" >Chính sách đổi trả</h3>
-                    <h3 class="container" href="./chinhsachbaomat.component.html" >Chính sách bảo mật</h3>
-                    <h3 class="container" href="./dieukhoandv.component.html">Điều khoản dịch vụ</h3>
-                </div>
-                <div>
-                    <img src="../../assets/LIÊN HỆ.jpg" class="img">
-                </div>
-   
-      </div>
+    <div id="rectangle">
+        <app-navigation-list [menu]="menudieukhoan"></app-navigation-list>
+
     </div>
 </div>

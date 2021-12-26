@@ -1,27 +1,31 @@
 <app-banner></app-banner>
 <mat-tab-group>
-  <mat-tab *ngFor="let item of products" [label]="item.heading!">
-    <div class="d-flex flex-wrap justify-content-around text-center pb-5 mt-3">
-      <app-product-template *ngFor="let productInItem of item.items" [product]="productInItem.value"
-        (seeMore)="productInItem.rediect()"></app-product-template>
+  <mat-tab label="SẢN PHẨM NỔI BẬT">
+    <div class="d-flex flex-wrap justify-content-around text-center pb-5 px-3 mt-3 mx-3">
+      <app-product-template *ngFor="let item of hightlightProducts.slice(0, 4)" [product] = "item"></app-product-template>
+    </div>
+  </mat-tab>
+  <mat-tab label="KHUYẾN MÃI">
+    <div class="d-flex flex-wrap justify-content-around text-center pb-5 px-3 mt-3 mx-3">
+      <app-product-template *ngFor="let item of promotionProducts.slice(0, 4)" [product] = "item"></app-product-template>
     </div>
   </mat-tab>
 </mat-tab-group>
 
 <div class="box-pre-footer">
-  <div style="font-weight: bold; color: var(--accent); font-size: 30px; text-align: center; line-height: 1.5;">TIỆN LỢI
+  <div style="font-weight: bold; color: var(--accent); text-align: center; line-height: 1.5;" class="fs-3">TIỆN LỢI
     KHI MUA ĐỒ ĂN VẶT TẠI DUMBUM</div>
   <div class="box-pre-footer flex-betweent-center" style=" margin-top: 30px; flex-wrap: wrap;">
     <div class="text-pre-footer">
-      <i class="bi bi-truck"></i><span> Giao hàng ưu việt</span>
+      <i class="bi bi-truck"></i><span>Giao hàng ưu việt</span>
       <p>Đội ngũ giao hàng đảm bảo tốt mọi nhu cầu mua sắm</p>
     </div>
     <div class="text-pre-footer">
-      <i class="bi bi-cup-straw"></i><span> Sản phẩm đa dạng</span>
+      <i class="bi bi-cup-straw"></i><span>Sản phẩm đa dạng</span>
       <p>Đồ ăn vặt đa dạng, phong phú với nhiều loại khác nhau</p>
     </div>
     <div class="text-pre-footer">
-      <i class="bi bi-people"></i><span> Luôn lắng nghe bạn</span>
+      <i class="bi bi-people"></i><span>Luôn lắng nghe bạn</span>
       <p>Đội ngũ nhân viên sẽ luôn lắng nghe và cải thiện mỗi ngày</p>
     </div>
   </div>

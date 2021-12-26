@@ -1,63 +1,76 @@
-<div class="py-3">
-  <picture>
-    <source srcset="../../assets/small-gioithieu.jpg" media="(max-width: 600px)">
-    <source srcset="../../assets/GIOITHIEU.jpg" media="(max-width: 1500px)">
-    <source srcset="../../assets/small-gioithieu2.jpg">
-    <img src="../../assets/GIOITHIEU.jpg" alt="Flowers">
-  </picture>
-
-  <div class="title">
-
-  </div>
-  <div class="row">
-    <div class="col-1">
-      <p class="title">LIÊN HỆ VỚI DUMBUM</p>
-      <h3 class="text">Địa chỉ</h3>
-      <p>Số 669, Khu bố 3, Quốc lộ 1A, Phường Linh xuân, Thành phố Thủ Đức</p>
-      <div class="text-contact">
-        <div>
-          <h3 class="text">Điện thoại</h3>
-          <p style="margin-right: 30px;">0868918629</p>
-        </div>
-        <div>
-          <h3 class="text">Email</h3>
-          <p style="margin-right: 30px;">dumbum@gmail.com</p>
-        </div>
-        <div>
-          <h3 class="text">Tax</h3>
-          <p style="margin-right: 30px;">123456789</p>
-        </div>
-
-      </div>
-      <p class="title">LIÊN HỆ</p>
+<div class="d-flex justify-content-between py-5 text-primary">
+  <div style="padding-right: 40px; flex-basis: 100%">
+    <p class="text-strong fs-3 text-accent">LIÊN HỆ VỚI DUMBUM</p>
+    <p class="text-accent fw-bold">Địa chỉ</p>
+    <p>Quận Cầu Giấy, Hà Nội - Quận Bình Thạnh, TP. Hồ Chí Minh</p>
+    <div class="text-contact">
       <div>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingName" placeholder="Họ và tên">
-          <label for="floatingName">Họ và tên</label>
-        </div>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingName" placeholder="Email">
-          <label for="floatingName">Email</label>
-        </div>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingName" placeholder="Số điện thoại">
-          <label for="floatingName">Số điện thoại</label>
-        </div>
-        <div class="form-floating">
-          <input type="text" class="form-control" id="floatingName" placeholder="Mục đích liên hệ">
-          <label for="floatingName">Mục đích liên hệ</label>
-        </div>
-        <div style="text-align: center;">
-          <button type="button" class="btn btn-accent">Gửi</button>
-        </div>
-
+        <p class="text-accent fw-bold">Điện thoại</p>
+        <p style="margin-right: 30px;">0916 113 115</p>
+      </div>
+      <div>
+        <p class="text-accent fw-bold">Email</p>
+        <p style="margin-right: 30px;">dumbum123@gmail.com</p>
+      </div>
+      <div>
+        <p class="text-accent fw-bold">Tax</p>
+        <p style="margin-right: 30px;">123456789</p>
       </div>
 
     </div>
+    <p class="title text-accent fw-bold">LIÊN HỆ</p>
+    <form #contactForm="ngForm" (ngSubmit)="onSubmit()">
+      <div>
+        <div class="form-floating my-3 w-100">
+          <input type="text" class="form-control" required id="contactName" name="contactName" placeholder="Họ và tên"
+            [(ngModel)]="contactUs.contactName" #inputContactName="ngModel">
+          <label for="floatingName">Họ và tên <span style="color: red;">*</span></label>
+          <div class="valid-tooltip"
+            *ngIf="!inputContactName.valid && (!inputContactName.pristine || contactForm.submitted)">
+            Bạn cần nhập tên và tên phải dài hơn 5 ký tự
+          </div>
+        </div>
+        <div class="form-floating my-3">
+          <input type="text" class="form-control" required id="contactEmail" placeholder="Email"
+            [(ngModel)]="contactUs.contactEmail" name="contactEmail" #inputContactEmail="ngModel">
+          <label for="floatingName">Email <span style="color: red;">*</span></label>
+          <div class="alert alert-danger"
+            *ngIf="!inputContactEmail.valid && (!inputContactEmail.pristine || contactForm.submitted)">
+            <small>Bạn cần nhập email</small>
+          </div>
+          <div class="form-floating my-3">
+            <input type="text" class="form-control" required id="contactPhone" name="contactPhone" placeholder="Số điện thoại"
+              [(ngModel)]="contactUs.contactPhone" #inputContactPhone="ngModel">
+            <label for="floatingName">Số điện thoại <span style="color: red;">*</span></label>
+            <div class="alert alert-danger"
+              *ngIf="!inputContactPhone.valid && (!inputContactPhone.pristine || contactForm.submitted)">
+              <small>Bạn cần nhập số điện thoại</small>
+            </div>
+            <div class="form-floating my-3">
+              <input type="text" class="form-control" required id="contactContent" name="contactContent" placeholder="Mục đích liên hệ"
+                [(ngModel)]="contactUs.contactContent" #inputContactContent="ngModel">
+              <label for="floatingName">Mục đích liên hệ <span style="color: red;">*</span></label>
+              <div class="alert alert-danger"
+                *ngIf="!inputContactContent.valid && (!inputContactContent.pristine || contactForm.submitted)">
+                <small>Bạn cần nhập mục đích liên hệ</small>
+              </div>
 
-    <div class="col-2">
-      <app-navigation-list [menu]="menu"></app-navigation-list>
-    </div>
+              <div class="my-3" style="text-align: center;">
+                <input *ngIf="contactForm.valid" class="btn btn-accent" type="submit" value="Gửi thông tin">
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </form>
+
+
   </div>
+  <div>
+      <app-navigation-list [menu]="menu"></app-navigation-list>
 
+    </div>
 </div>

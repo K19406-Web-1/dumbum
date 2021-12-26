@@ -1,11 +1,15 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import localeVN  from '@angular/common/locales/vi';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
 import { MatTabsModule } from '@angular/material/tabs';
-import { MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
+import { MatIconModule } from '@angular/material/icon';
+import { FormsModule } from '@angular/forms';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -27,6 +31,17 @@ import { NavigationListComponent } from './navigation-list/navigation-list.compo
 import { IntroPageComponent } from './intro-page/intro-page.component';
 import { ContactComponent } from './contact/contact.component';
 import { CartComponent } from './cart/cart.component';
+import { MessageBoxComponent } from './message-box/message-box.component';
+import { DieukhoandvComponent } from './dieukhoandv/dieukhoandv.component';
+import { ChinhsachComponent } from './chinhsach/chinhsach.component';
+import { HistoryDumbumComponent } from './historydumbum/historydumbum.component';
+import { QuantityInputComponent } from './quantity-input/quantity-input.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { PaymentComponent } from './payment/payment.component';
+import { BuyingComponent } from './buying/buying.component';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localeVN, 'vi-VN');
 
 @NgModule({
   declarations: [
@@ -41,13 +56,26 @@ import { CartComponent } from './cart/cart.component';
     SignInComponent,
     SpinnerComponent,
     NavigationListComponent,
+    MessageBoxComponent,
+    SubscribeInformComponent,
     ContactComponent,
     IntroPageComponent,
     CartComponent,
-    CheckoutComponent
+    CheckoutComponent,
+    DieukhoandvComponent,
+    ChinhsachComponent,
+    PolicyComponent,
+    HistoryDumbumComponent,
+    QuantityInputComponent,
+    DeliveryComponent,
+    PaymentComponent,
+    BuyingComponent
+
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    MatSnackBarModule,
     HttpClientModule,
     AppRoutingModule,
     BrowserAnimationsModule,
@@ -55,6 +83,7 @@ import { CartComponent } from './cart/cart.component';
     MatBadgeModule,
     MatTabsModule,
     MatDialogModule,
+    MatIconModule,
     RouterModule.forRoot([
       { path: '', component: HomePageComponent },
       { path: 'product-detail', component: ProductDetailComponent },
@@ -63,11 +92,34 @@ import { CartComponent } from './cart/cart.component';
       { path: 'policy', component: PolicyComponent },
       { path: 'contact-us', component: ContactComponent },
       { path: 'intro-page', component: IntroPageComponent },
-      { path: 'subscribe-inform', component: IntroPageComponent },
-      { path: 'checkout', component: CheckoutComponent }
+      { path: 'subscribe-inform', component: SubscribeInformComponent },
+      { path: 'checkout', component: CheckoutComponent },
+      { path: 'dieukhoandv', component: DieukhoandvComponent },
+      { path: 'chinhsach', component: ChinhsachComponent },
+      { path: 'historydumbum', component: HistoryDumbumComponent },
+      { path: 'delivery', component: DeliveryComponent },
+      { path: 'payment', component: PaymentComponent },
+      { path: 'buying', component: BuyingComponent },
     ]),
   ],
-  providers: [],
+  providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'vi-VN'
+    },
+    {
+      provide: DEFAULT_CURRENCY_CODE,
+      useValue: 'VND'
+    },
+    {
+      provide: MatDialogRef,
+      useValue: {}
+    },
+    {
+      provide: MAT_DIALOG_DATA,
+      useValue: []
+    }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

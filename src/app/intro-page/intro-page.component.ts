@@ -7,10 +7,10 @@ import { Menu, MenuItem } from 'src/models/menu';
   styleUrls: ['./intro-page.component.scss']
 })
 export class IntroPageComponent implements OnInit {
-  intro: Menu = new Menu([
-    new MenuItem('Giới thiệu DumBum', 'intro'),
-    new MenuItem('Thông tin chi tiết'),
-    new MenuItem('Liên hệ')
+  menuIntro: Menu = new Menu([
+    new MenuItem('Giới thiệu DumBum','intro-page'),
+    new MenuItem('Lịch sử hình thành', 'historydumbum'),
+    new MenuItem('Liên hệ', 'contact-us')
   ], 'VỀ CHÚNG TÔI');
   constructor() { }
 

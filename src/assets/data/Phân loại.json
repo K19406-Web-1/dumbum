@@ -1,15 +1,97 @@
 [
 	{
 		"categories": 0,
-		"highLights": [
-      "Cơm cháy khô bò",
-      "Cơm cháy khô gà"
+		"highlights": [
+			"Cơm cháy khô bò",
+			"Cơm cháy khô gà"
 		],
 		"promotions": [
-
+			"Cơm cháy chà bông"
 		],
 		"bestSeller": [
-
+			"Cơm cháy khô bò",
+			"Cơm cháy khô gà"
+		]
+	},
+	{
+		"categories": 1,
+		"highlights": [
+			"Da cá trứng muối",
+			"Da heo mắm hành"
+		],
+		"promotions": [
+			"Da heo tỏi ớt",
+			"Da heo Wasabi"
+		],
+		"bestSeller": [
+			"Da cá trứng muối",
+			"Da heo mắm hành",
+			"Da heo tỏi ớt"
+		]
+	},
+	{
+		"categories": 2,
+		"highlights": [
+			"Bánh tai heo",
+			"Bắp giòn rang mắm",
+			"Chuối sấy giòn"
+		],
+		"promotions": [
+			"Đậu Hà Lan 5 vị",
+			"Gạo lứt rong biển",
+			"Trái cây sấy"
+		],
+		"bestSeller": [
+			"Đậu Hà Lan Wasabi",
+			"Khoai sấy",
+			"Mít sấy Thái",
+			"Rong biển cháy tỏi"
+		]
+	},
+	{
+		"categories": 3,
+		"highlights": [
+			"Khô cá thiều miếng",
+			"Khô mực hấp dừa",
+			"Mực xé tẩm gia vị"
+		],
+		"promotions": [
+			"Khô cá thiều que"
+		],
+		"bestSeller": [
+			"Khô mực hấp dừa",
+			"Mực cán tẩm vị",
+			"Mực sợi sốt chanh"
+		]
+	},
+	{
+		"categories": 4,
+		"highlights": [
+			"Chip Chip",
+			"Ngũ cốc giảm cân"
+		],
+		"promotions": [
+			"Kẹo dâu tằm"
+		],
+		"bestSeller": [
+			"Kẹo me cay",
+			"Xí muội nho"
+		]
+	},
+	{
+		"categories": 5,
+		"highlights": [
+			"Khô gà mix ba vị",
+			"Khô gà lá chanh",
+			"Khô heo cháy bơ tỏi"
+		],
+		"promotions": [
+			"Khô bò miếng"
+		],
+		"bestSeller": [
+			"Khô bò que",
+			"Khô gà bơ tỏi",
+			"Nui giòn"
 		]
 	}
 ]

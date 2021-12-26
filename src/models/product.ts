@@ -3,6 +3,7 @@ import { Weight } from "./weight";
 export class ProductBase {
   name: string;
   productDetails: ProductDetail[];
+  quantiy: any;
 
   constructor(...args: [name: string, productDetails: ProductDetail[]] | [name: string, unitPrice: number, imageURL: string]) {
     this.name = args[0];
@@ -36,15 +37,34 @@ export interface ProductDetail {
   imageURL: string[];
 }
 
-export interface ProductType
-{
-  categories:number;
-  highlights:string[];
-  promotions:[];
-  bestSeller:string[];
+export interface ProductType {
+  categories: number;
+  highlights: string[];
+  promotions: [];
+  bestSeller: string[];
 }
 
-interface ProductPromotionType{
-  name:string,
-  
+export class ProductInCart {
+  name: string;
+  unitPrice: number;
+  imageURL: string;
+  quantity: number;
+
+  constructor(
+    name: string,
+    unitPrice: number,
+    imageURL: string,
+    quantity: number
+  ) {
+    this.name = name
+    this.unitPrice = unitPrice
+    this.imageURL = imageURL
+    this.quantity = quantity
+  }
+
+}
+
+interface ProductPromotionType {
+  name: string,
+
 }

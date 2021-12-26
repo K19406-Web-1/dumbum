@@ -1,0 +1,21 @@
+<div>
+  <h1 mat-dialog-title [ngClass]="getClassByType('text')">{{data.title}}</h1>
+  <hr [ngClass]="getClassByType('hr')" />
+  <div mat-dialog-content>
+    <h3 style="text-align:justify">{{data.content}}</h3>
+    <div *ngIf="data.icon" style="text-align:center">
+      <mat-icon style="font-size:5rem; margin-left:-50px" [ngClass]="getClassByType('text')">{{data.icon}}</mat-icon>
+    </div>
+  </div>
+  <div *ngIf="data.actions">
+    <hr [ngClass]="getClassByType('hr')" />
+    <div class="d-flex flex-row-reverse">
+      <button *ngFor="let item of data.actions" [ngClass]="getClassByType('btn')" (click)="item.action()">
+        <div class="d-flex">
+          <mat-icon *ngIf="item.icon">{{item.icon}}</mat-icon>
+          {{item.title}}
+        </div>
+      </button>
+    </div>
+  </div>
+</div>

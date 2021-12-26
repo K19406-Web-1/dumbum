@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Menu, MenuItem } from 'src/models/menu';
+import { categories, loadProducts, types } from 'src/models/dbcontext';
 import { ProductBase } from 'src/models/product';
 
 @Component({
@@ -8,25 +8,29 @@ import { ProductBase } from 'src/models/product';
   styleUrls: ['./home-page.component.scss']
 })
 export class HomePageComponent implements OnInit {
-
-  products: Menu[] = [
-    new Menu([
-      new MenuItem(new ProductBase('Mít sấy', 40000, '5-min.png')),
-      new MenuItem(new ProductBase('Khô cá Thiêu que', 40000, '6-min.png')),
-      new MenuItem(new ProductBase('Rong biển', 40000, '7-min.png')),
-      new MenuItem(new ProductBase('Da heo', 40000, '8-min.png'))
-    ], 'SẢN PHẨM NỔI BẬT'),
-    new Menu([
-      new MenuItem(new ProductBase('Gà sấy khô', 40000, '1-min.png'), 'product-detail'),
-      new MenuItem(new ProductBase('Cơm cháy', 40000, '2-min.png')),
-      new MenuItem(new ProductBase('Cơm cháy', 40000, '3-min.png')),
-      new MenuItem(new ProductBase('Mực xé', 40000, '4-min.png'))
-    ], 'GIẢM GIÁ')
-  ]
+  hightlightProducts: ProductBase[] = [];
+  promotionProducts: ProductBase[] = [];
 
   constructor() { }
 
   ngOnInit(): void {
+    Object.values(categories).forEach(category => {
+      loadProducts(category as unknown as categories, types['Nổi bật'])
+        .then(products => {
+          let product = products[0];
+          this.hightlightProducts.push(new ProductBase(
+            product.name,
+            product.productDetails[0].unitPrice,
+            product.productDetails[0].imageURL[0]));
+        });
+        loadProducts(category as unknown as categories, types['Khuyến mãi'])
+        .then(products => {
+          let product = products[0];
+          this.promotionProducts.push(new ProductBase(
+            product.name,
+            product.productDetails[0].unitPrice,
+            product.productDetails[0].imageURL[0]));
+        })
+    });
   }
-
 }

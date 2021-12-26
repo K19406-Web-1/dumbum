@@ -1,0 +1,17 @@
+.quantity {
+  text-align: center;
+  width: 25px;
+}
+.quantity::-webkit-outer-spin-button,
+.quantity::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.quantity-container{
+  border:  1px solid #ddd;
+  border-radius: 6px;
+}
+.quantity-container>*{
+  border: none !important;
+  background: none !important;
+}

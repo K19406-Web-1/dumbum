@@ -5,27 +5,20 @@
       <div>
         <div class="box__item--headingtext">VỀ CHÚNG TÔI</div>
         <div class="box__text--hover">
-          <p>Giới thiệu</p>
-          <p>Lịch sử hình thành</p>
-          <p>Thông tin chi tiết</p>
-          <p>Liên hệ</p>
+          <p *ngFor="let item of aboutUs.items" (click)="item.rediect()">{{item.value}}</p>
         </div>
       </div>
       <div>
         <div class="box__item--headingtext">HỖ TRỢ KHÁCH HÀNG</div>
         <div class="box__text--hover">
-          <p>Giao hàng</p>
-          <p>Phương thức thanh toán</p>
-          <p>Cách thức mua hàng</p>
+          <p *ngFor="let item of supportKH.items" (click)="item.rediect()">{{item.value}}</p>
         </div>
 
       </div>
       <div>
         <div class="box__item--headingtext">CHÍNH SÁCH</div>
         <div class="box__text--hover">
-          <p>Chính sách đổi trả</p>
-          <p>Chính sách bảo mật</p>
-          <p>Điều khoản dịch vụ</p>
+          <p *ngFor="let item of policy.items" (click)="item.rediect()">{{item.value}}</p>
         </div>
       </div>
     </div>
@@ -34,11 +27,10 @@
       <div>
         <div class="box__item--headingtext">LIÊN HỆ VỚI CHÚNG TÔI</div>
         <div class="icon" style="font-weight: bold;">
-          <i class="bi bi-geo-alt-fill"></i> Số 669, Khu phố 3, Quốc lộ 1A, Phường Linh Xuân, TP. Thủ Đức, TP. Hồ
-          Chí Minh
-          <br> <i class="bi bi-telephone-fill"></i> 0916 113 115
-          <br> <i class="bi bi-clock-fill"></i> Thời gian mở cửa: 08:00 AM - 21:00 PM
-          <br> <i class="bi bi-envelope-fill"></i> dumbum123@gmail.com
+          <i class="bi bi-geo-alt-fill"></i> <span> Quận Cầu Giấy, Hà Nội - Quận Bình Thạnh, TP. Hồ Chí Minh</span>
+          <br> <i class="bi bi-telephone-fill"></i> <span> 0916 113 115</span>
+          <br> <i class="bi bi-clock-fill"></i> <span> Thời gian mở cửa: 08:00 AM - 21:00 PM</span>
+          <br> <i class="bi bi-envelope-fill"></i> <span> dumbum123@gmail.com</span>
         </div>
         <div class="box__item--headingtext" style="margin-bottom: 7px; margin-top: 30px; display: flex;">MẠNG XÃ HỘI
           <div class="icon" style="margin-left: 10px;"> <i class="bi bi-facebook"></i> </div>
