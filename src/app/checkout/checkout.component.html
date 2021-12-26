@@ -1,43 +1,92 @@
-<div class="content mb-5">
+<div class="content">
   <div class="flex">
-    <div class="m-5">
-      <div class="size">THÔNG TIN KHÁCH HÀNG</div>
+    <div id="info">
+    <div class="mt-5">
+      <div class="text-strong text-accent fs-3">THÔNG TIN KHÁCH HÀNG</div>
       <div class="form-floating mb-5 mt-5">
-        <input style="width: 300px" type="text" class="form-control" id="floatingName" placeholder="Họ và tên">
-        <label for="floatin gName">Họ và tên</label>
+        <input type="text" class="form-control" placeholder="Họ và tên" id="username" [(ngModel)]="user.username"
+          minlength="5" #inputUserName="ngModel">
+        <label>Họ và tên</label>
+        <div class="alert alert-danger" *ngIf="!inputUserName.valid && (!inputUserName.pristine)">
+          <small>Bạn cần nhập tên và tên phải dài hơn 5 ký tự</small>
+        </div>
       </div>
       <div class="form-floating mb-5">
-        <input type="text" class="form-control" id="floatingName" placeholder="Số điện thoại">
-        <label for="floatingName">Số điện thoại</label>
+        <input type="text" class="form-control" placeholder="Số điện thoại" id="phone" [(ngModel)]="user.phone"
+          #inputPhone="ngModel">
+        <label>Số điện thoại</label>
+        <div class="alert alert-danger" *ngIf="!inputPhone.valid && (!inputPhone.pristine)">
+          <small>Bạn cần nhập đúng số điện thoại</small>
+        </div>
       </div>
       <div class="form-floating mb-5">
-        <input type="text" class="form-control" id="floatingName" placeholder="Địa chỉ nhận hàng">
-        <label for="floatingName">Địa chỉ nhận hàng</label>
+        <select class="form-control" placeholder="Thành phố" (change)="onProvinceChange()"
+          [(ngModel)]="user.address.provinceCode">
+          <option *ngFor="let item of provinces" [value]="item.code">{{item.name}}</option>
+        </select>
+        <label>Thành phố</label>
       </div>
       <div class="form-floating mb-5">
-        <input type="text" class="form-control" id="floatingName" placeholder="Thành phố">
-        <label for="floatingName">Thành phố</label>
+        <select class="form-control" placeholder="Quận huyện" [(ngModel)]="user.address.districtCode">
+          <option *ngFor="let item of districts" [value]="item.code">{{item.name}}</option>
+        </select>
+        <label>Quận huyện</label>
       </div>
       <div class="form-floating mb-5">
-        <input type="text" class="form-control" id="floatingName" placeholder="Quận huyện">
-        <label for="floatingName">Quận huyện</label>
+        <input type="text" class="form-control" placeholder="Số nhà, tên đường, khóm/ấp">
+        <label>Địa chỉ nhận hàng</label>
       </div>
     </div>
-    <app-cart></app-cart>
+    </div>
+    <div>
+      <div class="text-strong text-accent fs-3 box m-5">GIỎ HÀNG</div>
+      <div class="box1 m-5">
+        <div class="p-3">
+          <app-cart #cart (click)="updateOrder()"></app-cart>
+        </div>
+        <div class="m-3">
+          <select class="form-select mr-3">
+            <option selected>Chọn mã khuyến mãi</option>
+            <option>KM001</option>
+            <option>KM002</option>
+          </select>
+        </div>
+        <hr>
+        <div class="flex">
+          <label style="margin-left: 50px;">Tổng tiền</label>
+          <p id="amount" style="margin-right: 50px;">{{order.amount | currency}}</p>
+        </div>
+        <div class="flex">
+          <label style="margin-left: 50px;">Phí ship</label>
+          <p style="margin-right: 50px;">{{order.shippingFee | currency}}</p>
+        </div>
+        <hr>
+        <div class="flex text-strong">
+          <label style="margin-left: 50px;">Tổng cộng</label>
+          <p id="total" style="margin-right: 50px;">{{order.amount + order.shippingFee | currency}}</p>
+        </div>
+        <div class="text-center mb-4">
+          <input class="btn btn-accent" type="button" value="Thanh toán" (click)="onPayment()">
+        </div>
+      </div>
+    </div>
   </div>
   <div>
     <div>
-      <div class="size m-5">HÌNH THỨC THANH TOÁN</div>
+      <div class="text-strong text-accent fs-3 mb-3">HÌNH THỨC THANH TOÁN</div>
       <div class="flex">
-        <div class="form-floating mb-5">
-          <input class="form-check-input" type="radio">
-          <input type="text" class="form-control" id="floatingName" placeholder="Thanh toán khi nhận hàng">
-          <label for="floatingName">Thanh toán khi nhận hàng</label>
+        <div class="form-check-inline mb-5">
+          <input class="form-check-input" name="paymentMethod" type="radio">
+          <label style="margin-left: 10px;">Thanh toán khi nhận hàng</label>
         </div>
-        <div class="form-floating mb-5">
-          <input class="form-check-input" type="radio">
-          <input type="text" class="form-control" id="floatingName" placeholder="Thanh toán bằng E-banking">
-          <label for="floatingName">Thanh toán bằng E-banking</label>
+        <div class="form-check-inline mb-5">
+          <input class="form-check-input" name="paymentMethod" type="radio">
+          <label style="margin-left: 10px;">
+            <p>Chuyển khoản ngân hàng</p>
+            <p><span class="text-strong text-accent">Tên ngân hàng</span> Vietcombank</p>
+            <p><span class="text-strong text-accent">Số tài khoản</span> 21278300483948</p>
+            <p><span class="text-strong text-accent">Chi nhánh</span> Quận Cầu Giấy, Hà Nội</p>
+          </label>
         </div>
       </div>
     </div>

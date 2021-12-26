@@ -1,31 +1,46 @@
-<div class="container d-flex">
+<form class="needs-validation" #userForm="ngForm" (ngSubmit)="onSubmit()">
+  <div class="container d-flex">
     <div class="main" style="width:800px; margin: 50px auto;">
-        <div class="main_header text-accent fw-bold text-center display-6">ĐĂNG KÝ NHẬN THÔNG TIN</div>
-        <div class="main_display d-flex align-items-end">
-            <div class="main-left w-100">
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingName" placeholder="Họ và tên">
-                    <label for="floatingName">Họ và tên</label>
-                </div>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingEmail" placeholder="name@example.com">
-                    <label for="floatingInput">Email</label>
-                </div>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingTel" placeholder="Họ và tên">
-                    <label for="floatingTel">Số điện thoại</label>
-                </div>
-                <div class="form-floating">
-                    <input type="text" class="form-control" id="floatingCont" placeholder="Họ và tên">
-                    <label for="floatingInput">Mục đích liên hệ</label>
-                </div>
+      <div class="main_header text-accent fw-bold text-center display-6">ĐĂNG KÝ NHẬN THÔNG TIN</div>
+      <div class="main_display d-flex align-items-end">
+        <div class="main-left w-100">
+          <div class="form-floating">
+            <input type="text" class="form-control" required placeholder="Họ và tên" id="username"
+              [(ngModel)]="user.username" name="txtusername" minlength="5" #inputUserName="ngModel">
+            <label for="floatingName">Họ và tên <span style="color: red;">*</span></label>
+            <div class="valid-tooltip" *ngIf="!inputUserName.valid && (!inputUserName.pristine || userForm.submitted)">
+              Bạn cần nhập tên và tên phải dài hơn 5 ký tự
             </div>
-            <div class="main-right">
-                <img id="img-main" src="../../assets/contact.png" alt="Không tải được hình ảnh">
+          </div>
+          <div class="form-floating">
+            <input type="email" class="form-control" name="txtemail" id="email" [(ngModel)]="user.email" required
+              placeholder="name@example.com" #inputEmail="ngModel">
+            <label for="floatingInput">Email <span style="color: red;">*</span></label>
+            <div class="alert alert-danger" *ngIf="!inputEmail.valid && (!inputEmail.pristine || userForm.submitted)">
+              <small>Bạn cần nhập email</small>
             </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" placeholder="Số điện thoại" name="txtphone" id="phone"
+              [(ngModel)]="user.phone" #inputPhone="ngModel">
+            <label for="floatingTel">Số điện thoại</label>
+            <div class="alert alert-danger" *ngIf="!inputPhone.valid &&  userForm.submitted">
+              <small>Bạn cần nhập số điện thoại</small>
+            </div>
+          </div>
+          <div class="form-floating">
+            <input type="text" class="form-control" placeholder="Bạn muốn nhận thông tin gì?" name="txtcontent"
+              id="content" [(ngModel)]="user.content">
+            <label for="floatingInput">Bạn muốn nhận thông tin gì?</label>
+          </div>
         </div>
-        <div class="mx-auto main_footer text-center " style="margin: 3% auto 5%">
-            <button class="btn btn-accent w-25" type="submit">Đăng ký</button>
+        <div class="main-right">
+          <img id="img-main" src="../../assets/contact.png" alt="Không tải được hình ảnh">
         </div>
+      </div>
+      <div class="mx-auto text-center " style="margin: 3% auto 5%">
+        <button *ngIf="userForm.valid" class="btn btn-accent w-25" type="submit">Đăng ký</button>
+      </div>
     </div>
-</div>
+  </div>
+</form>
