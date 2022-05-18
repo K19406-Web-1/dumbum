@@ -1,0 +1,30 @@
+<form class="needs-validation" #userForm="ngForm">
+    <div class="container">
+
+        <div class="text-accent fw-bold text-center display-6 pt-4">ĐĂNG NHẬP</div>
+        <p class="text-primary text-center fw-bold display-6 mb-5">Kênh người bán</p>
+        <div class="d-flex justify-content-center">
+        <div class="col-6">
+            <div class="form-floating mb-xl-5">
+                <input type="text" class="form-control" required placeholder="Tên đăng nhập" id="username"
+                    name="txtusername" minlength="5">
+                <label for="floatingName">Tên đăng nhập</label>
+                <!-- <div class="valid-tooltip" >
+                Bạn cần nhập tên và tên phải dài hơn 5 ký tự
+              </div> -->
+            </div>
+            <div class="form-floating mb-5">
+                <input type="password" class="form-control" name="txtpassword" id="password" required
+                    placeholder="Mật khẩu">
+                <label for="floatingInput">Mật khẩu</label>
+                <!-- <div class="alert alert-danger" >
+                <small>Bạn cần nhập mật khẩu</small>
+              </div> -->
+            </div>
+            <div class="form-floating mb-5 text-center">
+                <button *ngIf="userForm.valid" class="btn btn-accent" type="submit">Đăng nhập</button>
+            </div>
+        </div>
+        </div>
+    </div>
+</form>

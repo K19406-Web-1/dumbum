@@ -1,5 +1,5 @@
 <header>
- <app-header></app-header>
+ <app-header *ngIf="!isAdmin"></app-header>
 </header>
 <main class="bg-light">
   <app-spinner class="center-screen" style="z-index: 99;" [hidden]="!loading"></app-spinner>
@@ -8,6 +8,6 @@
   </div>
 </main>
 
-<footer id="footer">
+<footer *ngIf="!isAdmin" id="footer">
   <app-footer></app-footer>
 </footer>

@@ -65,6 +65,20 @@ export class ProductInCart {
 }
 
 interface ProductPromotionType {
-  name: string,
+  name: string
+}
+
+export interface ProductTracking {
+  id: string
+  name: string
+  imageURL: string
+  quantity: number
+  unitPrice: number
+  status: string
+  category: string
+  createdAt: Date
+expiredAt: Date
+
+
 
 }

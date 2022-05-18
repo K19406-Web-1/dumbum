@@ -40,6 +40,9 @@ import { DeliveryComponent } from './delivery/delivery.component';
 import { PaymentComponent } from './payment/payment.component';
 import { BuyingComponent } from './buying/buying.component';
 import { registerLocaleData } from '@angular/common';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { ProductManagementComponent } from './product-management/product-management.component';
+import { OrderManagementComponent } from './order-management/order-management.component';
 
 registerLocaleData(localeVN, 'vi-VN');
 
@@ -69,7 +72,10 @@ registerLocaleData(localeVN, 'vi-VN');
     QuantityInputComponent,
     DeliveryComponent,
     PaymentComponent,
-    BuyingComponent
+    BuyingComponent,
+    AdminLoginComponent,
+    ProductManagementComponent,
+    OrderManagementComponent
 
   ],
   imports: [
@@ -100,6 +106,9 @@ registerLocaleData(localeVN, 'vi-VN');
       { path: 'delivery', component: DeliveryComponent },
       { path: 'payment', component: PaymentComponent },
       { path: 'buying', component: BuyingComponent },
+      { path: 'admin/login', component: AdminLoginComponent },
+      { path: 'admin/product', component: ProductManagementComponent },
+      { path: 'admin/order', component: OrderManagementComponent},
     ]),
   ],
   providers: [

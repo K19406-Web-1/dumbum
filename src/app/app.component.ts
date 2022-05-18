@@ -1,4 +1,4 @@
-import { AfterContentInit, Component } from '@angular/core';
+import { AfterContentInit, Component, OnInit } from '@angular/core';
 
 let isLoading = true;
 
@@ -15,12 +15,17 @@ export function disableLoading() {
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements AfterContentInit {
+export class AppComponent implements OnInit, AfterContentInit {
+  title = 'dumbum';
+  isAdmin = false;
+
+  ngOnInit(): void {
+    this.isAdmin = location.pathname.startsWith('/admin/');
+  }
+
   ngAfterContentInit(): void {
     isLoading = false;
   }
-
-  title = 'dumbum';
 
   get loading() {
     return isLoading;
