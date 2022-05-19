@@ -1,0 +1,16 @@
+.card-product {
+  width: 260px;
+  color: var(--primary);
+  transform: scale(1);
+  transition: all 0.4s;
+}
+.card-product:hover {
+  transform: scale(1.1);
+  border: solid var(--accent) 2px;
+  box-shadow: none !important;
+  transition: all 0.4s;
+}
+button {
+  width: 90%;
+  margin: auto;
+}
