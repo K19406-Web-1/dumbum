@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+<<<<<<< HEAD
 import { AdminAccountLogin } from 'src/models/admin-account';
 import { AdminAccountService } from 'src/services/admin-account.service';
+=======
+import { AdminAccount } from 'src/models/admin-account';
+>>>>>>> 92e00e899c838bd34cd0a286222cc1107e4231ba
 
 @Component({
   selector: 'app-admin-login',
@@ -17,6 +21,7 @@ export class AdminLoginComponent implements OnInit {
   constructor(private _adminAccountService:AdminAccountService) { }
 
   ngOnInit(): void {
+    this.admin = new AdminAccount('', '');
   }
 
   onLogin(){
