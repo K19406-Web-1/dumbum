@@ -69,16 +69,14 @@ interface ProductPromotionType {
 }
 
 export interface ProductTracking {
-  id: string
+  productId: string
   name: string
   imageURL: string
   quantity: number
+  unitWeight: number
   unitPrice: number
   status: string
   category: string
   createdAt: Date
-expiredAt: Date
-
-
-
+  expiredAt: Date
 }

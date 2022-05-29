@@ -1,12 +1,12 @@
 import { UserInformation } from "./information";
 
-export class Order {
+export class Invoice {
   unitPrice: number;
   amount: number;
   user:UserInformation;
   promotionCode: string;
   shippingFee: number;
-  items: OrderItems[];
+  items: InvoiceLine[];
 
   constructor(
     unitPrice: number,
@@ -15,18 +15,18 @@ export class Order {
     user:UserInformation,
     promotionCode: string,
     shippingFee: number,
-    items: OrderItems[]
+    lines: InvoiceLine[]
   ) {
     this.unitPrice = unitPrice
     this.amount = amount
     this.user = user;
     this.promotionCode = promotionCode
     this.shippingFee = shippingFee
-    this.items = items
+    this.items = lines
   }
 }
 
-export class OrderItems {
+export class InvoiceLine {
   productName: string;
   quantity: number;
   unitPrice: number;

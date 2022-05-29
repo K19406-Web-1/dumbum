@@ -5,7 +5,7 @@ import { disableLoading, enableLoading } from '../app.component';
 import { Location } from '../../models/province';
 import { MessageBoxComponent, MessageData } from '../message-box/message-box.component';
 import { MatDialog } from '@angular/material/dialog';
-import { Order } from 'src/models/invoice';
+import { Invoice } from 'src/models/invoice';
 import { User } from 'firebase/auth';
 import { CartComponent } from '../cart/cart.component';
 
@@ -20,7 +20,7 @@ export class CheckoutComponent implements OnInit, DoCheck {
   provinces!: Location[];
   districts?: Location[];
   user: UserInformation = new UserInformation('', '', { provinceCode: 0, districtCode: 0 });
-  order: Order = new Order(0, 0, 0, this.user, '', 0, [])
+  order: Invoice = new Invoice(0, 0, 0, this.user, '', 0, [])
 
   constructor(private dialog: MatDialog) { }
   ngDoCheck(): void {
@@ -100,7 +100,7 @@ export class CheckoutComponent implements OnInit, DoCheck {
 
   updateOrder() {
     console.log(this.cart);
-    this.order = new Order(0, 0, 0, this.user, '', 0, []);
+    this.order = new Invoice(0, 0, 0, this.user, '', 0, []);
     this.order.amount = 0;
     this.order.items = [];
 

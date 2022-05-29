@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { MatSnackBar } from '@angular/material/snack-bar';
 import { Cart, CartItems } from 'src/models/cart';
 import { ProductBase } from 'src/models/product';
 
@@ -11,7 +12,7 @@ export class ProductTemplateComponent implements OnInit {
 
   @Input() product!: ProductBase;
 
-  constructor() { }
+  constructor(private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
   }
@@ -31,5 +32,6 @@ export class ProductTemplateComponent implements OnInit {
     cart.addUnique(new CartItems(this.product.name));
 
     localStorage.setItem('cart', JSON.stringify(cart));
+    this.snackBar.open(`Đã thêm ${this.product.name} vào giỏ`);
   }
 }

@@ -1,58 +1,66 @@
-<button class="btn btn-accent mt-1">+ Tạo mới sản phẩm</button>
-<p class="text-strong text-primary fs-3 mt-3">DANH SÁCH TẤT CẢ SẢN PHẨM</p>
-<div class="d-flex justify-content-between">
-    <div class="mb-3 d-flex gap-1">
-        <label for="disabledSelect" class="form-label">Hiện</label>
-        <select id="disabledSelect" class="form-select">
-          <option>10</option>
-          <option>20</option>
-        </select>
-        <span>sản phẩm</span>
+<div>
+  <!-- <button class="btn btn-accent mt-1">+ Tạo mới sản phẩm</button> -->
+  <p class="text-strong text-primary fs-3 mt-5">DANH SÁCH TẤT CẢ SẢN PHẨM</p>
+  <div class="d-flex justify-content-between">
+    <div class="mb-3 d-flex align-items-center gap-3">
+      <span class="fs-6 text-muted">Hiện</span>
+      <select id="disabledSelect" class="form-select">
+        <option>10</option>
+        <option>20</option>
+      </select>
+      <span class="fs-6 text-muted text-nowrap">sản phẩm</span>
     </div>
     <div id="search" class="input-group w-25 d-flex" style="min-width: max-content;">
       <div class="form-floating small flex-grow-1">
         <input type="search" class="form-control rounded-0 rounded-start pb-0 pt-3" name="search" id="search"
-          style="font-size: 0.8rem; max-height: 40px;" placeholder=" ">
-        <label class="pt-2" for="search">Bạn muốn tìm gì?</label>
+          style="font-size: 0.8rem; max-height: 38px;" placeholder=" ">
+        <label class="pt-2 fs-6" for="search">Bạn muốn tìm gì?</label>
       </div>
       <span class="rounded-top" style="width: 40px">
-        <button class="btn btn-primary rounded-0 rounded-end h-100 w-100" type="button">
+        <button class="btn btn-primary rounded-0 rounded-end w-100" type="button">
           <i class="bi bi-search"></i>
         </button>
       </span>
     </div>
+  </div>
+  <table class="table table-hover">
+    <thead class="text-center">
+      <tr>
+        <th>#</th>
+        <th>Tên sản phẩm</th>
+        <th>Ảnh sản phẩm</th>
+        <th>Số lượng</th>
+        <th>Loại</th>
+        <th>Đơn giá</th>
+        <th>Tình trạng</th>
+        <th>Danh mục</th>
+        <th>Ngày sản xuất</th>
+        <th>Ngày hết hạn</th>
+        <th>Chức năng</th>
+      </tr>
+
+    </thead>
+    <tbody class="text-center align-middle">
+      <tr *ngFor="let item of productTrackings; let i=index">
+        <td>{{i+1}}</td>
+        <td>{{item.name}}</td>
+        <td><img [src]="item.imageURL" style="width: 100px;"></td>
+        <td class="text-end">{{item.quantity | number}}</td>
+        <td class="text-end">{{item.unitWeight | number}} g</td>
+        <td class="text-end">{{item.unitPrice | currency:'VND'}}</td>
+        <td>
+          <div [ngSwitch]="item.status">
+            <span *ngSwitchCase="'good'" class="fw-bold fs-6 bg-success text-white rounded-3 p-1 px-2">Tốt</span>
+            <span *ngSwitchCase="'bad'" class="fw-bold fs-6 bg-danger text-white rounded-3 p-1 px-2">Tệ</span>
+          </div>
+        </td>
+        <td>{{item.category}}</td>
+        <td>{{item.createdAt | date:'shortDate'}}</td>
+        <td>{{item.expiredAt | date:'shortDate'}}</td>
+        <td role="button"><i class="bi bi-pencil text-primary "></i> Edit</td>
+        <td role="button"><i class="bi bi-trash text-primary "></i> Del</td>
+      </tr>
+    </tbody>
+  </table>
+
 </div>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Mã sản phẩm</th>
-      <th>Tên sản phẩm</th>
-      <th>Ảnh sản phẩm</th>
-      <th>Số lượng</th>
-      <th>Đơn giá</th>
-      <th>Tình trạng</th>
-      <th>Danh mục</th>
-      <th>Ngày sản xuất</th>
-      <th>Ngày hết hạn</th>
-      <th>Chức năng</th>
-    </tr>
-
-  </thead>
-  <tbody>
-    <tr>
-      <td></td>
-      <td> </td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-      <td></td>
-    <td></td>
-    <td></td>
-      <td class="btn"><i class="bi bi-pencil text-primary "></i>Edit</td>
-      <td class="btn"><i class="bi bi-trash text-primary "></i> Del</td>
-    </tr>
-
-
-  </tbody>
-</table>

@@ -1,11 +1,27 @@
 <header>
- <app-header *ngIf="!isAdmin"></app-header>
+  <app-header *ngIf="!isAdmin"></app-header>
 </header>
 <main class="bg-light">
   <app-spinner class="center-screen" style="z-index: 99;" [hidden]="!loading"></app-spinner>
-  <div class="container-lg ">
-    <router-outlet></router-outlet>
-  </div>
+
+  <div *ngIf="isAdmin; then admin; else user"></div>
+
+  <ng-template #user>
+    <div class="container-lg ">
+      <router-outlet></router-outlet>
+    </div>
+  </ng-template>
+
+  <ng-template #admin>
+    <div class="d-flex">
+      <app-admin-sidebar *ngIf="!isAdminLogin" style="min-width: 180px;"></app-admin-sidebar>
+      <div [ngClass]="{'bg-white rounded-hard shadow p-3 m-3': !isAdminLogin, 'mx-auto w-100': isAdminLogin}"
+        style="min-height: calc(100vh - (2 * 16px)); width: 100%;">
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </ng-template>
+
 </main>
 
 <footer *ngIf="!isAdmin" id="footer">

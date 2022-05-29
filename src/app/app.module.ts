@@ -1,7 +1,7 @@
 import { NgModule, LOCALE_ID, DEFAULT_CURRENCY_CODE } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import localeVN  from '@angular/common/locales/vi';
+import localeVN from '@angular/common/locales/vi';
 
 import { MatButtonModule } from '@angular/material/button';
 import { MatBadgeModule } from '@angular/material/badge';
@@ -9,7 +9,7 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatDialogModule, MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { MatIconModule } from '@angular/material/icon';
 import { FormsModule } from '@angular/forms';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatSnackBarModule, MAT_SNACK_BAR_DATA, MAT_SNACK_BAR_DEFAULT_OPTIONS } from '@angular/material/snack-bar';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -43,6 +43,7 @@ import { registerLocaleData } from '@angular/common';
 import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ProductManagementComponent } from './product-management/product-management.component';
 import { OrderManagementComponent } from './order-management/order-management.component';
+import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
 
 registerLocaleData(localeVN, 'vi-VN');
 
@@ -75,7 +76,8 @@ registerLocaleData(localeVN, 'vi-VN');
     BuyingComponent,
     AdminLoginComponent,
     ProductManagementComponent,
-    OrderManagementComponent
+    OrderManagementComponent,
+    AdminSidebarComponent
 
   ],
   imports: [
@@ -108,7 +110,7 @@ registerLocaleData(localeVN, 'vi-VN');
       { path: 'buying', component: BuyingComponent },
       { path: 'admin/login', component: AdminLoginComponent },
       { path: 'admin/product', component: ProductManagementComponent },
-      { path: 'admin/order', component: OrderManagementComponent},
+      { path: 'admin/order', component: OrderManagementComponent },
     ]),
   ],
   providers: [
@@ -127,6 +129,10 @@ registerLocaleData(localeVN, 'vi-VN');
     {
       provide: MAT_DIALOG_DATA,
       useValue: []
+    },
+    {
+      provide: MAT_SNACK_BAR_DEFAULT_OPTIONS,
+      useValue: { horizontalPosition: 'end', verticalPosition: 'top', duration: 2000 }
     }
   ],
   bootstrap: [AppComponent]

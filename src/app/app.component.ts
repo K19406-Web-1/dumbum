@@ -18,9 +18,11 @@ export function disableLoading() {
 export class AppComponent implements OnInit, AfterContentInit {
   title = 'dumbum';
   isAdmin = false;
+  isAdminLogin = false;
 
   ngOnInit(): void {
     this.isAdmin = location.pathname.startsWith('/admin/');
+    this.isAdminLogin = location.pathname.trim().toLocaleLowerCase() === '/admin/login';
   }
 
   ngAfterContentInit(): void {

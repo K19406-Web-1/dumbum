@@ -2,7 +2,7 @@ import { Component, Inject, Input, OnInit, Output } from '@angular/core';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { Cart, CartItems } from 'src/models/cart';
 import { loadProductByName } from 'src/models/dbcontext';
-import { Order } from 'src/models/invoice';
+import { Invoice } from 'src/models/invoice';
 import { ProductInCart } from 'src/models/product';
 import { MessageBoxComponent, MessageData } from '../message-box/message-box.component';
 

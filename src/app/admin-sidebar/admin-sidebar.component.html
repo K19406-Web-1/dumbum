@@ -1,0 +1,15 @@
+<div class="d-flex flex-column p-3 gap-3">
+  <div class="text-center">
+    <img src="../../assets/logo.png" alt="Logo Dumbum">
+    <h4 class="text-primary fw-bold mt-2">{{adminAccount.name}}</h4>
+  </div>
+  <div class="p-2 px-3 fw-bold text-primary" role="button" [ngClass]="{'bg-accent rounded-hard shadow': isScreen('product')}" (click)="onChangeScreen('product')">
+    <i class="bi bi-boxes fs-5 me-2"></i>
+    <span>Sản phẩm</span>
+  </div>
+  <div class="p-2 px-3 fw-bold text-primary" [ngClass]="{'bg-accent rounded-hard shadow': isScreen('order')}" role="button" (click)="onChangeScreen('order')">
+    <i class="bi bi-receipt-cutoff fs-5 me-2"></i>
+    <span>Đơn hàng</span>
+  </div>
+
+</div>

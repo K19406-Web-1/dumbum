@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductTracking } from 'src/models/product';
-import { ProductService } from 'src/services/product.service';
+import { ProductTrackingService } from 'src/services/product-tracking.service';
 
 @Component({
   selector: 'app-product-management',
@@ -8,19 +8,17 @@ import { ProductService } from 'src/services/product.service';
   styleUrls: ['./product-management.component.scss']
 })
 export class ProductManagementComponent implements OnInit {
-  productTrackings: ProductTracking[]=[];
+  productTrackings: ProductTracking[] = [];
 
 
-  constructor(private _productService: ProductService) { }
+  constructor(private _productTrackingService: ProductTrackingService) { }
 
   ngOnInit(): void {
-
-
-  }
-  getAllProducts(){
-    this._productService.getById().subscribe({
-      next: data => this.productTrackings = data,
-    })
+    this._productTrackingService.getAll().subscribe(
+      (data) => {
+        this.productTrackings = data;
+      }
+    );
   }
 
 
