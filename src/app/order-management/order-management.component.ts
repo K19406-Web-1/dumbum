@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { InvoiceApi } from 'src/models/invoice';
+import { InvoiceService } from 'src/services/invoice.service';
 
 @Component({
   selector: 'app-order-management',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class OrderManagementComponent implements OnInit {
 
-  constructor() { }
+  invoices: InvoiceApi[] = []
+
+  constructor(private _invoiceService: InvoiceService) { }
 
   ngOnInit(): void {
+    this._invoiceService.getAll().subscribe(
+      (data) => {
+        this.invoices = data;
+      });
   }
 
 }

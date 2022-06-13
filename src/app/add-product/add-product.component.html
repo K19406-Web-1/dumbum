@@ -1,0 +1,30 @@
+<p class="text-strong text-primary fs-3">THÊM SẢN PHẨM MỚI</p>
+<div class="d-flex flex-column gap-3 mt-4">
+  <div class="form-floating">
+    <input class="form-control" placeholder="Nhập tên sản phẩm" type="text" [(ngModel)]="product.name">
+    <label>Nhập tên sản phẩm</label>
+  </div>
+  <div class="form-floating">
+    <input class="form-control" placeholder="Nhập giá" type="text" [(ngModel)]="productDetail.unitPrice">
+    <label>Nhập giá</label>
+  </div>
+  <div class="form-floating">
+    <input class="form-control" placeholder="Nhập thành phần" type="text" [(ngModel)]="product.materials">
+    <label>Nhập thành phần</label>
+  </div>
+  <div class="form-floating">
+    <input class="form-control" placeholder="Nhập trọng lượng (g)" type="number" [(ngModel)]="productDetail.weight">
+    <label>Nhập trọng lượng (g)</label>
+  </div>
+  <div class="form-floating">
+    <input class="form-control" placeholder="Nhập hạn sử dụng (tháng)" type="number" [(ngModel)]="product.lifeTimeByMonth">
+    <label>Nhập hạn sử dụng</label>
+  </div>
+  <div>
+    <label for="avatar" class="me-3">Chọn hình: </label>
+    <input type="file" class="form-control" id="avatar" name="avatar" accept="image/png, image/jpeg">
+  </div>
+  <div class="text-center">
+    <input class="btn btn-accent" type="button" value="THÊM SẢN PHẨM MỚI">
+  </div>
+</div>

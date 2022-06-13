@@ -44,6 +44,7 @@ import { AdminLoginComponent } from './admin-login/admin-login.component';
 import { ProductManagementComponent } from './product-management/product-management.component';
 import { OrderManagementComponent } from './order-management/order-management.component';
 import { AdminSidebarComponent } from './admin-sidebar/admin-sidebar.component';
+import { AddProductComponent } from './add-product/add-product.component';
 
 registerLocaleData(localeVN, 'vi-VN');
 
@@ -77,7 +78,8 @@ registerLocaleData(localeVN, 'vi-VN');
     AdminLoginComponent,
     ProductManagementComponent,
     OrderManagementComponent,
-    AdminSidebarComponent
+    AdminSidebarComponent,
+    AddProductComponent
 
   ],
   imports: [
@@ -111,6 +113,7 @@ registerLocaleData(localeVN, 'vi-VN');
       { path: 'admin/login', component: AdminLoginComponent },
       { path: 'admin/product', component: ProductManagementComponent },
       { path: 'admin/order', component: OrderManagementComponent },
+      { path: 'admin/add-product', component: AddProductComponent },
     ]),
   ],
   providers: [

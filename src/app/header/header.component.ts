@@ -21,7 +21,8 @@ export class HeaderComponent implements OnInit {
     new MenuItem('Trang chủ', ''),
     new MenuItem('Tin tức', 'subscribe-inform'),
     new MenuItem('Liên hệ', 'contact-us'),
-    new MenuItem('Hỗ trợ', '#footer')
+    new MenuItem('Hỗ trợ', '#footer'),
+    new MenuItem('Trang quản trị', 'admin/login')
   ], undefined, MenuItemIsCurrentOptions.include);
 
   categories: Menu = new Menu([

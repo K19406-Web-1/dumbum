@@ -1,13 +1,14 @@
 import { Component, DoCheck, OnInit, ViewChild } from '@angular/core';
 import { getProvinces, getDistricts } from 'src/models/province';
 import { UserInformation } from 'src/models/information';
-import { disableLoading, enableLoading } from '../app.component';
+import { AppComponent, disableLoading, enableLoading } from '../app.component';
 import { Location } from '../../models/province';
 import { MessageBoxComponent, MessageData } from '../message-box/message-box.component';
 import { MatDialog } from '@angular/material/dialog';
-import { Invoice } from 'src/models/invoice';
+import { Invoice, InvoiceApi } from 'src/models/invoice';
 import { User } from 'firebase/auth';
 import { CartComponent } from '../cart/cart.component';
+import { InvoiceService } from 'src/services/invoice.service';
 
 @Component({
   selector: 'app-checkout',
@@ -16,13 +17,14 @@ import { CartComponent } from '../cart/cart.component';
 })
 export class CheckoutComponent implements OnInit, DoCheck {
 
+
   @ViewChild('cart') cart!: CartComponent;
   provinces!: Location[];
   districts?: Location[];
   user: UserInformation = new UserInformation('', '', { provinceCode: 0, districtCode: 0 });
-  order: Invoice = new Invoice(0, 0, 0, this.user, '', 0, [])
+  order: Invoice = new Invoice(0, 0, this.user, '', 0, '', [])
 
-  constructor(private dialog: MatDialog) { }
+  constructor(private _dialog: MatDialog, private _invoiceService: InvoiceService) { }
   ngDoCheck(): void {
     if (this.cart) {
       this.updateOrder();
@@ -62,12 +64,12 @@ export class CheckoutComponent implements OnInit, DoCheck {
           title: 'Đóng',
           icon: undefined,
           action: () => {
-            this.dialog.closeAll();
+            this._dialog.closeAll();
           }
         }
       ]
     }
-    this.dialog.open(MessageBoxComponent, { data: messageData });
+    this._dialog.open(MessageBoxComponent, { data: messageData });
   }
 
   messageSuccess() {
@@ -81,31 +83,54 @@ export class CheckoutComponent implements OnInit, DoCheck {
           title: 'Đóng',
           icon: undefined,
           action: () => {
-            this.dialog.closeAll();
+            this._dialog.closeAll();
           }
         }
       ]
     }
-    this.dialog.open(MessageBoxComponent, { data: messageData });
+    this._dialog.open(MessageBoxComponent, { data: messageData });
   }
 
   onPayment() {
-    if (new Date().getSeconds() % 2 == 0) {
-      this.messageFailed();
-    }
-    else {
-      this.messageSuccess();
-    }
+    enableLoading();
+
+    this._invoiceService.create({
+      amount: this.order.amount,
+      lines: this.order.lines,
+      user: {
+        id: '',
+        name: this.user.username,
+      },
+      createdAt: new Date(),
+      paymentMethod: 'banking',
+      id: 'DH' + Math.floor(Math.random() * 10_000),
+      status: 'pending',
+      totalPrice: 0
+    }).subscribe({
+      next: () => {
+        this.messageSuccess();
+      },
+      error: () => {
+        this.messageFailed();
+      },
+      complete: () => {
+        disableLoading();
+      }
+    });
+
+    setInterval(()=>{
+      disableLoading();
+    }, 3_000);
   }
 
   updateOrder() {
     console.log(this.cart);
-    this.order = new Invoice(0, 0, 0, this.user, '', 0, []);
+    this.order = new Invoice(0, 0, this.user, '', 0, '', []);
     this.order.amount = 0;
-    this.order.items = [];
+    this.order.lines = [];
 
     this.cart.products.forEach(item => {
-      this.order.items.push({
+      this.order.lines.push({
         productName: item.name,
         quantity: item.quantity,
         unitPrice: item.unitPrice

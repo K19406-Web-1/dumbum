@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { ProductBase } from 'src/models/product';
+import { Product, ProductBase } from 'src/models/product';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -22,7 +22,7 @@ export class ProductService {
     return this._http.get<ProductBase[]>(this.url_api).pipe();
   }
 
-
-
-
+  async post(product: Product) {
+    await this._http.post<Product>(this.url_api, product).pipe();
+  }
 }

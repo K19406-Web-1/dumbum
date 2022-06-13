@@ -1,5 +1,5 @@
-<div>
-  <p class="text-strong text-primary fs-3 mt-5">DANH SÁCH TẤT CẢ SẢN PHẨM</p>
+<div class="py-3">
+  <p class="text-strong text-primary fs-3">DANH SÁCH TẤT CẢ ĐƠN HÀNG</p>
   <div class="d-flex justify-content-between">
     <div class="mb-3 d-flex align-items-center gap-3">
       <span class="fs-6 text-muted">Hiện</span>
@@ -22,28 +22,28 @@
       </span>
     </div>
   </div>
-<table class="table table-hover">
+  <table class="table table-hover">
     <thead class="text-center">
       <tr>
-        <th>Mã đơn hàng </th>
+        <th>#</th>
+        <th>Mã đơn hàng</th>
         <th>Tên khách hàng</th>
         <th>Số sản phẩm</th>
         <th>Tổng tiền</th>
         <th>Tình trạng</th>
-        <th>Ngày đặt đơn</th>
+        <th>Ngày đặt</th>
       </tr>
 
     </thead>
     <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr *ngFor="let item of invoices; let i=index">
+        <td class="text-center">{{i+1}}</td>
+        <td class="text-center">{{item.id}}</td>
+        <td>{{item.user.name}}</td>
+        <td class="text-center">{{item.amount | number}}</td>
+        <td class="text-end">{{item.totalPrice | currency:'VND'}}</td>
+        <td class="text-center">{{item.status}}</td>
+        <td class="text-center">{{item.createdAt | date:'short'}}</td>
       </tr>
     </tbody>
   </table>

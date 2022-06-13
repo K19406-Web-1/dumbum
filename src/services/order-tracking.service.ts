@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
 @Injectable({
   providedIn: 'root'
 })
-export class OrderService {
+export class OrderTrackingService {
 
     keyCart = 'cart';
     url_api: string = "http://localhost:3000/api/orders";

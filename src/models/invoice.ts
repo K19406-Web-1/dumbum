@@ -1,28 +1,28 @@
 import { UserInformation } from "./information";
 
 export class Invoice {
-  unitPrice: number;
   amount: number;
-  user:UserInformation;
+  user: UserInformation;
   promotionCode: string;
   shippingFee: number;
-  items: InvoiceLine[];
+  paymentMethod: string;
+  lines: InvoiceLine[];
 
   constructor(
-    unitPrice: number,
     amount: number,
-    total: number,
-    user:UserInformation,
+    productCount: number,
+    user: UserInformation,
     promotionCode: string,
     shippingFee: number,
+    paymentMethod: string,
     lines: InvoiceLine[]
   ) {
-    this.unitPrice = unitPrice
     this.amount = amount
     this.user = user;
     this.promotionCode = promotionCode
     this.shippingFee = shippingFee
-    this.items = lines
+    this.paymentMethod = paymentMethod
+    this.lines = lines
   }
 }
 
@@ -37,4 +37,20 @@ export class InvoiceLine {
     this.unitPrice = unitPrice
   }
 
+}
+
+export interface InvoiceApi {
+  id:string;
+  amount: number;
+  user: {
+    id: string,
+    name: string
+  };
+  promotionCode?: string;
+  totalPrice: number;
+  shippingFee?: number;
+  paymentMethod: string;
+  status: string;
+  createdAt: Date;
+  lines: InvoiceLine[];
 }

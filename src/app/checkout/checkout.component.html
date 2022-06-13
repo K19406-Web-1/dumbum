@@ -1,4 +1,5 @@
-<div class="content">
+<form class="needs-validation" #checkoutForm="ngForm">
+  <div class="content">
   <div class="flex">
     <div id="info">
     <div class="mt-5">
@@ -6,17 +7,18 @@
       <div class="form-floating mb-5 mt-5">
         <input type="text" class="form-control" placeholder="Họ và tên" id="username" [(ngModel)]="user.username"
           minlength="5" #inputUserName="ngModel">
-        <label>Họ và tên</label>
-        <div class="alert alert-danger" *ngIf="!inputUserName.valid && (!inputUserName.pristine)">
+        <label>Họ và tên <span style="color: red;">*</span></label>
+        <div class="alert-danger" *ngIf="!inputUserName.valid && (!inputUserName.pristine || checkoutForm.submitted)">
           <small>Bạn cần nhập tên và tên phải dài hơn 5 ký tự</small>
         </div>
+
       </div>
       <div class="form-floating mb-5">
         <input type="text" class="form-control" placeholder="Số điện thoại" id="phone" [(ngModel)]="user.phone"
           #inputPhone="ngModel">
-        <label>Số điện thoại</label>
-        <div class="alert alert-danger" *ngIf="!inputPhone.valid && (!inputPhone.pristine)">
-          <small>Bạn cần nhập đúng số điện thoại</small>
+        <label>Số điện thoại <span style="color: red;">*</span></label>
+        <div class="alert alert-danger" *ngIf="!inputPhone.valid && (!inputPhone.pristine || checkoutForm.submitted)">
+          <small>Bạn cần nhập số điện thoại</small>
         </div>
       </div>
       <div class="form-floating mb-5">
@@ -24,17 +26,20 @@
           [(ngModel)]="user.address.provinceCode">
           <option *ngFor="let item of provinces" [value]="item.code">{{item.name}}</option>
         </select>
-        <label>Thành phố</label>
+        <label>Thành phố <span style="color: red;">*</span></label>
       </div>
       <div class="form-floating mb-5">
         <select class="form-control" placeholder="Quận huyện" [(ngModel)]="user.address.districtCode">
           <option *ngFor="let item of districts" [value]="item.code">{{item.name}}</option>
         </select>
-        <label>Quận huyện</label>
+        <label>Quận huyện <span style="color: red;">*</span></label>
       </div>
       <div class="form-floating mb-5">
-        <input type="text" class="form-control" placeholder="Số nhà, tên đường, khóm/ấp">
-        <label>Địa chỉ nhận hàng</label>
+        <input type="text" class="form-control" placeholder="Số nhà, tên đường, khóm/ấp" [(ngModel)]="user.address" #inputAddress="ngModel">
+        <label>Địa chỉ nhận hàng <span style="color: red;">*</span></label>
+        <div class="alert alert-danger" *ngIf="!inputAddress.valid && (!inputAddress.pristine || checkoutForm.submitted)">
+          <small>Bạn cần nhập địa chỉ nhận hàng</small>
+        </div>
       </div>
     </div>
     </div>
@@ -92,3 +97,4 @@
     </div>
   </div>
 </div>
+</form>

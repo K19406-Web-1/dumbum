@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { ProductTracking } from 'src/models/product';
 import { ProductTrackingService } from 'src/services/product-tracking.service';
+import { AddProductComponent } from '../add-product/add-product.component';
 
 @Component({
   selector: 'app-product-management',
@@ -11,7 +13,7 @@ export class ProductManagementComponent implements OnInit {
   productTrackings: ProductTracking[] = [];
 
 
-  constructor(private _productTrackingService: ProductTrackingService) { }
+  constructor(private _productTrackingService: ProductTrackingService, private _dialog: MatDialog) { }
 
   ngOnInit(): void {
     this._productTrackingService.getAll().subscribe(
@@ -21,5 +23,8 @@ export class ProductManagementComponent implements OnInit {
     );
   }
 
+  openAddProduct() {
+    this._dialog.open(AddProductComponent, { width: "350" });
+  }
 
 }

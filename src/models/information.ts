@@ -3,6 +3,8 @@ interface Address {
   districtCode: number;
 }
 
+
+
 export class UserInformation {
   username: string;
   phone: string;
